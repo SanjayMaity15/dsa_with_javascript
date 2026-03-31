@@ -91,13 +91,22 @@
 
 // Find the sum of all odd numbers up to N
 
-const n = 10;
+// const n = 10;
 
-let sum = 0;
+// let sum = 0;
+// for (let i = 1; i <= n; i++){
+//     if (i % 2 !== 0) {
+//         sum += i;
+//     }
+// }
+
+// console.log(sum);
+
+
+// Print the cubes of numbers from 1 to N
+
+const n = 5;
+
 for (let i = 1; i <= n; i++){
-    if (i % 2 !== 0) {
-        sum += i;
-    }
+    console.log(Math.pow(i, 3));
 }
-
-console.log(sum);
