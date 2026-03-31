@@ -28,16 +28,28 @@
 
 // Sum of First N Natural Numbers
 
-const n = 10;
+// const n = 10;
 
-// one way
-console.log((n * (n + 1)) / 2);
+ // one way
+// console.log((n * (n + 1)) / 2);
 
-// other way
+ // other way
 
-let sum = 0;
+// let sum = 0;
+// for (let i = 1; i <= n; i++){
+//     sum += i;
+// }
+
+// console.log(sum);
+
+
+// Product (Factorial) of N
+
+const n = 5;
+
+let fact = 1;
 for (let i = 1; i <= n; i++){
-    sum += i;
+    fact *= i;
 }
 
-console.log(sum);
+console.log(fact);
