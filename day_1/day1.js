@@ -45,11 +45,26 @@
 
 // Product (Factorial) of N
 
-const n = 5;
+// const n = 5;
 
-let fact = 1;
+// let fact = 1;
+// for (let i = 1; i <= n; i++){
+//     fact *= i;
+// }
+
+// console.log(fact);
+
+
+// Sum of All Even Numbers up to N
+
+const n = 20;
+
+let sum = 0;
+
 for (let i = 1; i <= n; i++){
-    fact *= i;
+    if (i % 2 === 0) {
+        sum += i;
+    }
 }
 
-console.log(fact);
+console.log(sum);
