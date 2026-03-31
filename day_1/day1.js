@@ -57,14 +57,22 @@
 
 // Sum of All Even Numbers up to N
 
-const n = 20;
+// const n = 20;
 
-let sum = 0;
+// let sum = 0;
+
+// for (let i = 1; i <= n; i++){
+//     if (i % 2 === 0) {
+//         sum += i;
+//     }
+// }
+
+// console.log(sum);
+
+// Print Squares of Numbers from 1 to N
+
+const n = 10
 
 for (let i = 1; i <= n; i++){
-    if (i % 2 === 0) {
-        sum += i;
-    }
+    console.log(i * i);
 }
-
-console.log(sum);
