@@ -17,10 +17,27 @@
 
 // Print All Even Numbers from 1 to N
 
-const n = 25;
+// const n = 25;
 
-for (let i = 0; i <= n; i++){
-    if (i % 2 === 0) {
-        console.log(i);
-    }
+// for (let i = 0; i <= n; i++){
+//     if (i % 2 === 0) {
+//         console.log(i);
+//     }
+// }
+
+
+// Sum of First N Natural Numbers
+
+const n = 10;
+
+// one way
+console.log((n * (n + 1)) / 2);
+
+// other way
+
+let sum = 0;
+for (let i = 1; i <= n; i++){
+    sum += i;
 }
+
+console.log(sum);
