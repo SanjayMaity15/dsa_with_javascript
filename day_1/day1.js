@@ -1,4 +1,4 @@
-// Print Numbers from 1 to N
+//! Print Numbers from 1 to N
 
 // const n = 5;
 // for (let i = 1; i <= n; i++){
@@ -71,8 +71,19 @@
 
 // Print Squares of Numbers from 1 to N
 
-const n = 10
+// const n = 10
+
+// for (let i = 1; i <= n; i++){
+//     console.log(i * i);
+// }
+
+
+// Print all numbers divisible by 3 and 5 up to N
+
+const n = 30;
 
 for (let i = 1; i <= n; i++){
-    console.log(i * i);
+    if (i % 3 === 0 && i % 5 === 0) {
+        console.log(i);
+    }
 }
