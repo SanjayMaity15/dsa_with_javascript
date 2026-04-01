@@ -28,25 +28,42 @@
 
 // ! Calculate Electricity Bill
 
-const units = 230;
+// const units = 230;
 
-let remainingUnits = 0;
-let totalBill = 0;
+// let remainingUnits = 0;
+// let totalBill = 0;
 
-if (units <= 100) {
-	totalBill += units * 5;
-} else if (units <= 200) {
-	totalBill += 100 * 5;
-	totalBill += (units - 100) * 7;
-} else if (units <= 300) {
-	totalBill += 100 * 5;
-	totalBill += 100 * 7;
-	totalBill += (units - 200) * 10;
+// if (units <= 100) {
+// 	totalBill += units * 5;
+// } else if (units <= 200) {
+// 	totalBill += 100 * 5;
+// 	totalBill += (units - 100) * 7;
+// } else if (units <= 300) {
+// 	totalBill += 100 * 5;
+// 	totalBill += 100 * 7;
+// 	totalBill += (units - 200) * 10;
+// } else {
+// 	totalBill += 100 * 5;
+// 	totalBill += 100 * 7;
+// 	totalBill += 100 * 10;
+// 	totalBill += (units - 300) * 12;
+// }
+
+// console.log(totalBill);
+
+// ! Check if a Character is a Vowel or Consonant
+
+
+let char = "E";
+
+if (
+	char.toLowerCase() === "a" ||
+	char.toLowerCase() === "e" ||
+	char.toLowerCase() === "i" ||
+	char.toLowerCase() === "o" ||
+	char.toLowerCase() === "u"
+) {
+	console.log("Vowel");
 } else {
-	totalBill += 100 * 5;
-	totalBill += 100 * 7;
-	totalBill += 100 * 10;
-	totalBill += (units - 300) * 12;
+	console.log("Consonant");
 }
-
-console.log(totalBill);
