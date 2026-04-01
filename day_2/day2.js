@@ -54,16 +54,28 @@
 // ! Check if a Character is a Vowel or Consonant
 
 
-let char = "E";
+// let char = "E";
 
-if (
-	char.toLowerCase() === "a" ||
-	char.toLowerCase() === "e" ||
-	char.toLowerCase() === "i" ||
-	char.toLowerCase() === "o" ||
-	char.toLowerCase() === "u"
-) {
-	console.log("Vowel");
+// if (
+// 	char.toLowerCase() === "a" ||
+// 	char.toLowerCase() === "e" ||
+// 	char.toLowerCase() === "i" ||
+// 	char.toLowerCase() === "o" ||
+// 	char.toLowerCase() === "u"
+// ) {
+// 	console.log("Vowel");
+// } else {
+// 	console.log("Consonant");
+// }
+
+
+
+// ! Check if a Year is a Leap Year
+
+const year = 1700;
+
+if (year % 400 === 0 || (year % 4 === 0 && year % 100 !== 0)) {
+    console.log("Leap year");
 } else {
-	console.log("Consonant");
+    console.log("Not leap year");
 }
