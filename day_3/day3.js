@@ -113,26 +113,43 @@
 // 	console.log(line);
 // }
 
-
 // ! Print Hollow Inverted Pyramid
+
+// let row = 5;
+
+// for (let i = row; i > 0; i--) {
+// 	let line = "";
+
+//     for (let j = 1; j <= row - i; j++) {
+//         line += "  ";
+//     }
+
+//     for (let z = 1; z <= (2 * i) - 1; z++){
+//         if (i === 1 || i === row || z === 1 || z === (2 * i) - 1) {
+//             line += "* ";
+//         } else {
+//             line += "  "
+//         }
+//     }
+
+//     console.log(line);
+// }
+
+
+// ! Print Diamond Pattern
 
 let row = 5;
 
-for (let i = row; i > 0; i--) {
-	let line = "";
 
-    for (let j = 1; j <= row - i; j++) {
-        line += "  ";
-    }
+for (let i = 1; i <= 2 * row - 1; i++) {
+	let line = ""; 
+	let stars = i <= row ? i : 2 * row - i;
+	let spaces = row - stars;
 
-    for (let z = 1; z <= (2 * i) - 1; z++){
-        if (i === 1 || i === row || z === 1 || z === (2 * i) - 1) {
-            line += "* ";
-        } else {
-            line += "  "
-        }
-    }
+	line += "  ".repeat(spaces);
 
-    console.log(line);
+	line += "* ".repeat(2 * stars - 1); 
+
+
+	console.log(line);
 }
-
