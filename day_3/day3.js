@@ -40,22 +40,36 @@
 // 	console.log(line);
 // }
 
-
 // ! Print Inverted Pyramid Pattern
+
+// let row = 5;
+
+// for (let x = 5; x > 0; x--) {
+// 	let line = "";
+
+// 	for (let y = 1; y <= row - x; y++) {
+// 		line += "  ";
+// 	}
+
+// 	for (let z = 1; z <= 2 * x - 1; z++) {
+// 		line += "* ";
+// 	}
+// 	console.log(line);
+// }
+
+// ! Print Hollow Square Pattern
 
 let row = 5;
 
-for (let x = 5; x > 0; x--) {
+for (let x = 1; x <= row; x++) {
 	let line = "";
-
-	// Add spaces
-	for (let y = 1; y <= row - x; y++) {
-		line += "  "; 
+	for (let y = 1; y <= row; y++) {
+		if (x === 1 || x === row || y === 1 || y === row) {
+			line += "* ";
+        } else {
+            line += "  "
+        }
 	}
 
-	// Add stars
-	for (let z = 1; z <= 2 * x - 1; z++) {
-		line += "* ";
-	}
 	console.log(line);
 }
