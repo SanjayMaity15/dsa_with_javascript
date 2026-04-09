@@ -59,17 +59,40 @@
 
 // ! Print Hollow Square Pattern
 
+// let row = 5;
+
+// for (let x = 1; x <= row; x++) {
+// 	let line = "";
+// 	for (let y = 1; y <= row; y++) {
+// 		if (x === 1 || x === row || y === 1 || y === row) {
+// 			line += "* ";
+//         } else {
+//             line += "  "
+//         }
+// 	}
+
+// 	console.log(line);
+// }
+
+// ! Print Hollow Pyramid Pattern
+
 let row = 5;
 
-for (let x = 1; x <= row; x++) {
+for (let i = 1; i <= row; i++) {
 	let line = "";
-	for (let y = 1; y <= row; y++) {
-		if (x === 1 || x === row || y === 1 || y === row) {
-			line += "* ";
+
+    for (let j = 1; j <= row - i; j++) {
+        line += "  ";
+    }
+
+    for (let z = 1; z <= (2 * i) - 1; z++){
+        if (i === 1 || i === row || z === 1 || z === (2 * i) - 1) {
+            line += "* "
         } else {
             line += "  "
         }
-	}
+    }
 
-	console.log(line);
+    console.log(line);
 }
+
