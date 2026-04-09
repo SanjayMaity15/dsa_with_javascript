@@ -138,8 +138,26 @@
 
 // ! Print Diamond Pattern
 
-let row = 5;
+// let row = 5;
 
+
+// for (let i = 1; i <= 2 * row - 1; i++) {
+// 	let line = "";
+// 	let stars = i <= row ? i : 2 * row - i;
+// 	let spaces = row - stars;
+
+// 	line += "  ".repeat(spaces);
+
+// 	line += "* ".repeat(2 * stars - 1);
+
+
+// 	console.log(line);
+// }
+
+
+// ! Print Hollow Diamond Pattern
+
+let row = 5;
 
 for (let i = 1; i <= 2 * row - 1; i++) {
 	let line = ""; 
@@ -148,7 +166,13 @@ for (let i = 1; i <= 2 * row - 1; i++) {
 
 	line += "  ".repeat(spaces);
 
-	line += "* ".repeat(2 * stars - 1); 
+    for (let y = 1; y <= 2 * stars - 1; y++){
+        if ( y === 1 || y === 2 * stars - 1) {
+            line += "* "
+        } else {
+            line += "  "
+        }
+    }
 
 
 	console.log(line);
