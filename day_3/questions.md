@@ -140,27 +140,7 @@
 
 ---
 
-2. **Print Butterfly Pattern**
-
-   * Input: `Rows = 5`
-   * Output:
-
-     ```
-     *       *
-     **     **
-     ***   ***
-     **** ****
-     *********
-     **** ****
-     ***   ***
-     **     **
-     *       *
-     ```
-   * ✨ *Combines multiple sections with symmetry logic.*
-
----
-
-3. **Print Diamond Pattern**
+2. **Print Diamond Pattern**
 
    * Input: `Rows = 3`
    * Output:
@@ -176,27 +156,7 @@
 
 ---
 
-4. **Print Hourglass Pattern**
-
-   * Input: `Rows = 5`
-   * Output:
-
-     ```
-     *********
-      *******
-       *****
-        ***
-         *
-        ***
-       *****
-      *******
-     *********
-     ```
-   * ✨ *Practices combining inverse loops and symmetrical shapes.*
-
----
-
-5. **Print Hollow Diamond Pattern**
+3. **Print Hollow Diamond Pattern**
 
    * Input: `Rows = 3`
    * Output:
@@ -212,7 +172,7 @@
 
 ---
 
-6. **Print Rhombus Pattern**
+4. **Print Rhombus Pattern**
 
    * Input: `Rows = 5`
    * Output:
@@ -225,29 +185,4 @@
      *****
      ```
    * ✨ *Practices offset alignment for uniform patterns.*
-
-   ---
-
-7. **Print Multiplication Table (Single and Upto N)**
-
-   * Input 1: `Number = 5`
-   * Output:
-
-     ```
-     5 x 1 = 5
-     5 x 2 = 10
-     ...
-     5 x 10 = 50
-     ```
-   * Input 2: `Upto = 3`
-   * Output:
-
-     ```
-     Table of 1
-     1 x 1 = 1
-     ...
-     Table of 3
-     3 x 10 = 30
-     ```
-   * ✨ *Practices simple and nested loops for repetitive operations.*
 
