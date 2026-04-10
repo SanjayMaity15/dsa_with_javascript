@@ -15,10 +15,18 @@
 
 // ! Remove the Decimal Point Mathematically
 
-let n = 12.34;
+// let n = 12.34;
 
-let power = n.toString().split(".")[1].length
+// let power = n.toString().split(".")[1].length
 
-console.log(n * Math.pow(10, power));
+// console.log(n * Math.pow(10, power));
 
+
+// ! Separate Whole and Fractional Parts of a Number
+
+
+let n = 5.75
+
+const [wholeNum, fracnum] = n.toString().split(".")
+console.log({wholeNum, fracnum});
 
