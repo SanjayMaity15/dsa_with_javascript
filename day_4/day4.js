@@ -44,8 +44,24 @@
 
 // ! Generate a Decimal Number from Whole and Fractional Digits
 
-let wholeNum = [1, 2]
-let fracnum = [3, 4]
+// let wholeNum = [1, 2]
+// let fracnum = [3, 4]
 
-let decimalNum = Number(`${wholeNum.join("")}.${fracnum.join("")}`);
-console.log(decimalNum);
+// let decimalNum = Number(`${wholeNum.join("")}.${fracnum.join("")}`);
+// console.log(decimalNum);
+
+
+// ! Reverse a Number
+
+let n = 12345;
+
+let revNum = 0;
+
+while (n !== 0) {
+    let digit = n % 10;
+    revNum = revNum * 10 + digit
+    n = Math.floor(n / 10)
+}
+
+
+console.log(revNum);
