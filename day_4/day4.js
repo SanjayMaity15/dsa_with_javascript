@@ -70,6 +70,7 @@
 
 let n = 121;
 let temp = n;
+
 let revNum = 0;
 
 while (n !== 0) {
