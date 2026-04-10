@@ -53,8 +53,23 @@
 
 // ! Reverse a Number
 
-let n = 12345;
+// let n = 12345;
 
+// let revNum = 0;
+
+// while (n !== 0) {
+//     let digit = n % 10;
+//     revNum = revNum * 10 + digit
+//     n = Math.floor(n / 10)
+// }
+
+
+// console.log(revNum);
+
+// ! Palindrome Number
+
+let n = 121;
+let temp = n;
 let revNum = 0;
 
 while (n !== 0) {
@@ -64,4 +79,7 @@ while (n !== 0) {
 }
 
 
-console.log(revNum);
+let result = revNum === temp ? "Palindrome" : "Not"
+console.log(result);
+
+
