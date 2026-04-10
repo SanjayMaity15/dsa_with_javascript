@@ -25,8 +25,19 @@
 // ! Separate Whole and Fractional Parts of a Number
 
 
-let n = 5.75
+// let n = 5.75
+
+// const [wholeNum, fracnum] = n.toString().split(".")
+// console.log({wholeNum, fracnum});
+
+
+
+// ! Count Whole and Fractional Digits Separately
+
+
+let n = 12.345
 
 const [wholeNum, fracnum] = n.toString().split(".")
-console.log({wholeNum, fracnum});
+console.log(wholeNum.length);
+console.log(fracnum.length);
 
