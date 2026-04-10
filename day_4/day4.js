@@ -35,9 +35,17 @@
 // ! Count Whole and Fractional Digits Separately
 
 
-let n = 12.345
+// let n = 12.345
 
-const [wholeNum, fracnum] = n.toString().split(".")
-console.log(wholeNum.length);
-console.log(fracnum.length);
+// const [wholeNum, fracnum] = n.toString().split(".")
+// console.log(wholeNum.length);
+// console.log(fracnum.length);
 
+
+// ! Generate a Decimal Number from Whole and Fractional Digits
+
+let wholeNum = [1, 2]
+let fracnum = [3, 4]
+
+let decimalNum = Number(`${wholeNum.join("")}.${fracnum.join("")}`);
+console.log(decimalNum);
