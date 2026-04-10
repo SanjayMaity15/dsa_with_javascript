@@ -68,19 +68,34 @@
 
 // ! Palindrome Number
 
-let n = 121;
+// let n = 121;
+// let temp = n;
+
+// let revNum = 0;
+
+// while (n !== 0) {
+//     let digit = n % 10;
+//     revNum = revNum * 10 + digit
+//     n = Math.floor(n / 10)
+// }
+
+
+// let result = revNum === temp ? "Palindrome" : "Not"
+// console.log(result);
+
+
+
+// ! Check if a Number is an Armstrong Number (also called a Narcissistic Number)
+
+
+let n = 153;
 let temp = n;
-
-let revNum = 0;
-
+let sum = 0;
 while (n !== 0) {
     let digit = n % 10;
-    revNum = revNum * 10 + digit
+    sum += Math.pow(digit, 3)
     n = Math.floor(n / 10)
 }
 
-
-let result = revNum === temp ? "Palindrome" : "Not"
+let result = sum === temp ? "Armstrong" : "Not"
 console.log(result);
-
-
