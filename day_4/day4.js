@@ -119,18 +119,42 @@
 
 // ! Find the Average of Digits
 
-let n = 4567
+// let n = 4567
 
-let sum = 0;
-let length = 0
+// let sum = 0;
+// let length = 0
+
+// while (n !== 0) {
+//     length++;
+//     let digit = n % 10;
+//     sum += digit;
+//     n = Math.floor(n / 10)
+// }
+
+// let result = sum / length
+// console.log({result});
+
+
+
+
+// ! Find the Largest and Smallest Digit in a Number
+
+let n = 9483;
+
+let largest = Number.MIN_SAFE_INTEGER;
+let smallest = Number.MAX_SAFE_INTEGER;
 
 while (n !== 0) {
-    length++;
     let digit = n % 10;
-    sum += digit;
-    n = Math.floor(n / 10)
-}
+    n = Math.floor(n / 10);
+    if (digit > largest) {
+        largest = digit
+    }
 
-let result = sum / length
-console.log({result});
+    if (digit < smallest) {
+        smallest = digit
+    }
+}
+console.log({largest, smallest});
+
 
