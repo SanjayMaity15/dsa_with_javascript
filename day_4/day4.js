@@ -103,15 +103,34 @@
 
 // ! Find the Sum of Digits
 
-let n = 987;
+// let n = 987;
+
+// let sum = 0;
+
+// while (n !== 0) {
+//     let digit = n % 10;
+//     sum += digit;
+//     n = Math.floor(n / 10)
+// }
+
+// console.log({ sum });
+
+
+
+// ! Find the Average of Digits
+
+let n = 4567
 
 let sum = 0;
+let length = 0
 
 while (n !== 0) {
+    length++;
     let digit = n % 10;
     sum += digit;
     n = Math.floor(n / 10)
 }
 
-console.log({ sum });
+let result = sum / length
+console.log({result});
 
