@@ -139,22 +139,48 @@
 
 // ! Find the Largest and Smallest Digit in a Number
 
-let n = 9483;
+// let n = 9483;
 
-let largest = Number.MIN_SAFE_INTEGER;
-let smallest = Number.MAX_SAFE_INTEGER;
+// let largest = Number.MIN_SAFE_INTEGER;
+// let smallest = Number.MAX_SAFE_INTEGER;
+
+// while (n !== 0) {
+//     let digit = n % 10;
+//     n = Math.floor(n / 10);
+//     if (digit > largest) {
+//         largest = digit
+//     }
+
+//     if (digit < smallest) {
+//         smallest = digit
+//     }
+// }
+// console.log({largest, smallest});
+
+
+// ! Check if a Number is a Strong Number
+
+let n = 145;
+let temp = n;
+let sum = 0;
+
+function fact(n) {
+
+    let fact = 1
+
+    for (let i = 1; i <= n; i++){
+        fact = fact * i;
+    }
+
+    return fact
+}
 
 while (n !== 0) {
     let digit = n % 10;
     n = Math.floor(n / 10);
-    if (digit > largest) {
-        largest = digit
-    }
-
-    if (digit < smallest) {
-        smallest = digit
-    }
+    sum += fact(digit)
 }
-console.log({largest, smallest});
 
+let result = sum === temp ? "Strong number" : "Not";
 
+console.log({result});
