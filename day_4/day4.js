@@ -208,17 +208,31 @@
 
 // ! Find the Frequency of Each Digit
 
-let arr = [1, 1, 2, 3, 3]
+// let arr = [1, 1, 2, 3, 3]
 
-let obj = {}
+// let obj = {}
 
-for (let el of arr) {
-    if (obj.hasOwnProperty(el)) {
-        obj[el] = obj[el] + 1
-    } else {
-        obj[el] = 1
-    }
+// for (let el of arr) {
+//     if (obj.hasOwnProperty(el)) {
+//         obj[el] = obj[el] + 1
+//     } else {
+//         obj[el] = 1
+//     }
+// }
+
+// console.log(obj);
+
+
+// ! Check if a Number is a Harshad Number
+
+let n = 18;
+let temp = n;
+let sumofdigits = 0
+while (n !== 0) {
+    let digit = n % 10;
+    n = Math.floor(n / 10)
+    sumofdigits += digit
 }
 
-
-console.log(obj);
+let result = temp % sumofdigits === 0 ? "harshad" : "Not"
+console.log(result);
