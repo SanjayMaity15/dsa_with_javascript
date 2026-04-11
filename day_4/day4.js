@@ -188,23 +188,37 @@
 
 // ! Check if a Number is an Automorphic Number
 
-let n = 25;
-let digitCount = n.toString().length;
-let digits = 0;
+// let n = 25;
+// let digitCount = n.toString().length;
+// let digits = 0;
 
-let square = Math.pow(n, 2)
+// let square = Math.pow(n, 2)
 
-for (let i = 0; i < digitCount; i++){
-    let digit = square % 10;
-    square = Math.floor(square / 10)
-    digits = (digit * Math.pow(10, i)) + digits
+// for (let i = 0; i < digitCount; i++){
+//     let digit = square % 10;
+//     square = Math.floor(square / 10)
+//     digits = (digit * Math.pow(10, i)) + digits
+// }
+
+// let result = n === digits ? "Automorphic" : "Not"
+
+// console.log({digits});
+// console.log(result);
+
+
+// ! Find the Frequency of Each Digit
+
+let arr = [1, 1, 2, 3, 3]
+
+let obj = {}
+
+for (let el of arr) {
+    if (obj.hasOwnProperty(el)) {
+        obj[el] = obj[el] + 1
+    } else {
+        obj[el] = 1
+    }
 }
 
-let result = n === digits ? "Automorphic" : "Not"
 
-console.log({digits});
-console.log(result);
-
-
-
-
+console.log(obj);
