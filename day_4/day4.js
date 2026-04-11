@@ -88,14 +88,30 @@
 // ! Check if a Number is an Armstrong Number (also called a Narcissistic Number)
 
 
-let n = 153;
-let temp = n;
+// let n = 153;
+// let temp = n;
+// let sum = 0;
+// while (n !== 0) {
+//     let digit = n % 10;
+//     sum += Math.pow(digit, 3)
+//     n = Math.floor(n / 10)
+// }
+
+// let result = sum === temp ? "Armstrong" : "Not"
+// console.log(result);
+
+
+// ! Find the Sum of Digits
+
+let n = 987;
+
 let sum = 0;
+
 while (n !== 0) {
     let digit = n % 10;
-    sum += Math.pow(digit, 3)
+    sum += digit;
     n = Math.floor(n / 10)
 }
 
-let result = sum === temp ? "Armstrong" : "Not"
-console.log(result);
+console.log({ sum });
+
