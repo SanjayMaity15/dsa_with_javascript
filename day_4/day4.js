@@ -160,27 +160,51 @@
 
 // ! Check if a Number is a Strong Number
 
-let n = 145;
-let temp = n;
-let sum = 0;
+// let n = 145;
+// let temp = n;
+// let sum = 0;
 
-function fact(n) {
+// function fact(n) {
 
-    let fact = 1
+//     let fact = 1
 
-    for (let i = 1; i <= n; i++){
-        fact = fact * i;
-    }
+//     for (let i = 1; i <= n; i++){
+//         fact = fact * i;
+//     }
 
-    return fact
+//     return fact
+// }
+
+// while (n !== 0) {
+//     let digit = n % 10;
+//     n = Math.floor(n / 10);
+//     sum += fact(digit)
+// }
+
+// let result = sum === temp ? "Strong number" : "Not";
+
+// console.log({result});
+
+
+// ! Check if a Number is an Automorphic Number
+
+let n = 25;
+let digitCount = n.toString().length;
+let digits = 0;
+
+let square = Math.pow(n, 2)
+
+for (let i = 0; i < digitCount; i++){
+    let digit = square % 10;
+    square = Math.floor(square / 10)
+    digits = (digit * Math.pow(10, i)) + digits
 }
 
-while (n !== 0) {
-    let digit = n % 10;
-    n = Math.floor(n / 10);
-    sum += fact(digit)
-}
+let result = n === digits ? "Automorphic" : "Not"
 
-let result = sum === temp ? "Strong number" : "Not";
+console.log({digits});
+console.log(result);
 
-console.log({result});
+
+
+
