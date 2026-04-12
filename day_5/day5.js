@@ -38,12 +38,27 @@
 
 // ! Find the LCM (Least Common Multiple) of Two Numbers
 
-let n1 = 12, n2 = 18;
-let max = n1 > n2 ? n1 : n2;
+// let n1 = 12, n2 = 18;
+// let max = n1 > n2 ? n1 : n2;
 
-for (let i = max; i <= n1 * n2; i++){
-    if (i % n1 === 0 && i % n2 === 0) {
-        console.log(i);
-        break
+// for (let i = max; i <= n1 * n2; i++){
+//     if (i % n1 === 0 && i % n2 === 0) {
+//         console.log(i);
+//         break
+//     }
+// }
+
+
+// ! Count the Total Number of Factors of a Number
+
+let n = 24;
+
+let result = []
+
+for (let i = 1; i <= n; i++){
+    if (n % i === 0) {
+        result.push(i)
     }
 }
+
+console.log(result.length);
