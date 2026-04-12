@@ -51,14 +51,30 @@
 
 // ! Count the Total Number of Factors of a Number
 
-let n = 24;
+// let n = 24;
 
-let result = []
+// let result = []
+
+// for (let i = 1; i <= n; i++){
+//     if (n % i === 0) {
+//         result.push(i)
+//     }
+// }
+
+// console.log(result.length);
+
+
+// ! Sum of All Factors of a Numbe
+
+
+let n = 12;
+
+let result = 0
 
 for (let i = 1; i <= n; i++){
     if (n % i === 0) {
-        result.push(i)
+        result += i
     }
 }
 
-console.log(result.length);
+console.log(result);
