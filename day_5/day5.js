@@ -95,17 +95,78 @@
 
 // ! Check if a Number is a Perfect Number
 
-let n = 28;
+// let n = 28;
 
-let sum = 0;
+// let sum = 0;
 
-for (let i = 1; i < n; i++){
-    if (n % i === 0) {
-        sum += i;
+// for (let i = 1; i < n; i++){
+//     if (n % i === 0) {
+//         sum += i;
+//     }
+// }
+
+
+// let result = n === sum ? "Perfect" : "Not"
+
+// console.log(result);
+
+
+// ! Find the HCF and LCM of Three Numbers
+
+let n1 = 8, n2 = 12, n3 = 16;
+
+let min;
+let max;
+
+if (n1 < n2 && n1 < n3) {
+    min = n1
+} else if (n2 < n1 && n2 < n3) {
+    min = n2
+} else {
+    min = n3
+}
+
+if (n1 > n2 && n1 > n3) {
+    max = n1
+} else if (n2 > n1 && n2 > n3) {
+    max = n2
+} else {
+    max = n3
+}
+
+
+for (let i = min; i > 0; i--){
+    if (n1 % i === 0 && n2 % i === 0 && n3 % i === 0) {
+        console.log(i);
+        break
+    }
+}
+
+for (let i = max; i <= n1 * n2 * n3; i++){
+    if (i % n1 === 0 && i % n2 === 0 && i % n3 === 0) {
+        console.log(i);
+        break
     }
 }
 
 
-let result = n === sum ? "Perfect" : "Not"
+// optimize way
 
-console.log(result);
+function gcd(a, b) {
+    while (b !== 0) {
+        let temp = b;
+        b = a % b;
+        a = temp
+    }
+
+    return a;
+}
+
+
+function lcm(a, b) {
+    return a * b / gcd(a, b)
+}
+
+
+console.log(gcd(gcd(n1, n2), n3));
+console.log(lcm(lcm(n1, n2), n3));
