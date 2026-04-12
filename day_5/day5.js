@@ -22,3 +22,15 @@
 // }
 
 
+// ! Find the HCF (Highest Common Factor) or GCD of Two Numbers
+
+let n1 = 12, n2 = 18;
+
+let min = n1 > n2 ? n2 : n1
+
+for (let i = min; i > 0; i--){
+    if (n1 % i === 0 && n2 % i === 0) {
+        console.log(i);
+        break;
+    }
+}
