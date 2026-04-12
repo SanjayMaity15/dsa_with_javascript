@@ -67,14 +67,28 @@
 // ! Sum of All Factors of a Numbe
 
 
-let n = 12;
+// let n = 12;
 
-let result = 0
+// let result = 0
 
-for (let i = 1; i <= n; i++){
-    if (n % i === 0) {
-        result += i
+// for (let i = 1; i <= n; i++){
+//     if (n % i === 0) {
+//         result += i
+//     }
+// }
+
+// console.log(result);
+
+
+// ! Find the Greatest Factor of a Number (Other Than Itself)
+
+let n = 36;
+let temp = n;
+
+for (let i = Math.floor(n / 2); i > 0; i--){
+    if (temp % i === 0) {
+        console.log(i);
+        break
     }
 }
 
-console.log(result);
