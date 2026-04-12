@@ -24,13 +24,26 @@
 
 // ! Find the HCF (Highest Common Factor) or GCD of Two Numbers
 
+// let n1 = 12, n2 = 18;
+
+// let min = n1 > n2 ? n2 : n1
+
+// for (let i = min; i > 0; i--){
+//     if (n1 % i === 0 && n2 % i === 0) {
+//         console.log(i);
+//         break;
+//     }
+// }
+
+
+// ! Find the LCM (Least Common Multiple) of Two Numbers
+
 let n1 = 12, n2 = 18;
+let max = n1 > n2 ? n1 : n2;
 
-let min = n1 > n2 ? n2 : n1
-
-for (let i = min; i > 0; i--){
-    if (n1 % i === 0 && n2 % i === 0) {
+for (let i = max; i <= n1 * n2; i++){
+    if (i % n1 === 0 && i % n2 === 0) {
         console.log(i);
-        break;
+        break
     }
 }
