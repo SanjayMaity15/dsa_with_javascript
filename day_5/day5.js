@@ -82,13 +82,30 @@
 
 // ! Find the Greatest Factor of a Number (Other Than Itself)
 
-let n = 36;
-let temp = n;
+// let n = 36;
+// let temp = n;
 
-for (let i = Math.floor(n / 2); i > 0; i--){
-    if (temp % i === 0) {
-        console.log(i);
-        break
+// for (let i = Math.floor(n / 2); i > 0; i--){
+//     if (temp % i === 0) {
+//         console.log(i);
+//         break
+//     }
+// }
+
+
+// ! Check if a Number is a Perfect Number
+
+let n = 28;
+
+let sum = 0;
+
+for (let i = 1; i < n; i++){
+    if (n % i === 0) {
+        sum += i;
     }
 }
 
+
+let result = n === sum ? "Perfect" : "Not"
+
+console.log(result);
