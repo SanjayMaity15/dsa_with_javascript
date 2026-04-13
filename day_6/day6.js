@@ -78,7 +78,31 @@
 
 // ! Print All Prime Numbers up to N
 
+// let n = 20;
+
+// function isPrime(n) {
+
+// 	for (let i = 2; i < n; i++) {
+// 		if (n % i === 0) {
+// 			return;
+// 		}
+// 	}
+
+// 	return n;
+// }
+
+// for (let i = 2; i <= n; i++) {
+//     let result = isPrime(i)
+//     if (result !== undefined)
+//         console.log(result);
+// }
+
+
+// ! Sum of All Prime Numbers till N
+
+
 let n = 20;
+let sum = 0;
 
 function isPrime(n) {
 
@@ -94,5 +118,7 @@ function isPrime(n) {
 for (let i = 2; i <= n; i++) {
     let result = isPrime(i)
     if (result !== undefined)
-        console.log(result);
+        sum += result;
 }
+
+console.log(sum);
