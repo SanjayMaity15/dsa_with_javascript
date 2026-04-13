@@ -97,9 +97,7 @@
 //         console.log(result);
 // }
 
-
 // ! Sum of All Prime Numbers till N
-
 
 // let n = 20;
 // let sum = 0;
@@ -123,26 +121,42 @@
 
 // console.log(sum);
 
-
 // ! Check if Two Numbers are Twin Primes
 
-let n1 = 3;
-let n2 = 5;
+// let n1 = 3;
+// let n2 = 5;
 
-function isPrime(n) {
+// function isPrime(n) {
 
-	for (let i = 2; i < n; i++) {
-		if (n % i === 0) {
-			return;
-		}
+// 	for (let i = 2; i < n; i++) {
+// 		if (n % i === 0) {
+// 			return;
+// 		}
+// 	}
+
+// 	return n;
+// }
+
+// if ((isPrime(n1) && isPrime(n2)) && Math.abs(n1 - n2) === 2) {
+//     console.log("Twin prime");
+// } else {
+//     console.log("Not");
+// }
+
+// ! Generate Fibonacci Numbers Within a Range
+
+let min = 10;
+let max = 100;
+
+let a = 0,
+	b = 1;
+
+while (a <= max) {
+	if (a >= min) {
+		console.log(a);
 	}
 
-	return n;
-}
-
-
-if ((isPrime(n1) && isPrime(n2)) && Math.abs(n1 - n2) === 2) {
-    console.log("Twin prime");
-} else {
-    console.log("Not");
+	let temp = a + b;
+	a = b;
+	b = temp;
 }
