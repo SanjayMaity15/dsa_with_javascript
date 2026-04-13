@@ -145,18 +145,50 @@
 
 // ! Generate Fibonacci Numbers Within a Range
 
-let min = 10;
-let max = 100;
+// let min = 10;
+// let max = 100;
 
-let a = 0,
-	b = 1;
+// let a = 0,
+// 	b = 1;
 
-while (a <= max) {
-	if (a >= min) {
-		console.log(a);
+// while (a <= max) {
+// 	if (a >= min) {
+// 		console.log(a);
+// 	}
+
+// 	let temp = a + b;
+// 	a = b;
+// 	b = temp;
+// }
+
+
+// ! Print First N Prime Fibonacci Numbers
+
+let count = 1;
+
+let a = 0;
+let b = 1;
+
+
+function isPrime(n) {
+
+    if (n < 2) return;
+
+	for (let i = 2; i < n; i++) {
+		if (n % i === 0) {
+			return;
+		}
 	}
 
-	let temp = a + b;
-	a = b;
-	b = temp;
+	return n;
+}
+
+while (count <= 5) {
+    if (isPrime(a)) {
+        console.log(a);
+        count++
+    }
+    let temp = a + b;
+    a = b;
+    b = temp;
 }
