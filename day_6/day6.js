@@ -46,16 +46,36 @@
 
 // ! Find the Nth Fibonacci Number
 
-let n = 8;
-let a = 0;
-let b = 1;
+// let n = 8;
+// let a = 0;
+// let b = 1;
 
-for (let i = 1; i <= n; i++){
+// for (let i = 1; i <= n; i++){
     
-    let temp = a + b;
-    a = b;
-    b = temp;
+//     let temp = a + b;
+//     a = b;
+//     b = temp;
 
+// }
+
+// console.log(a);
+
+
+// ! Check if a Number Belongs to the Fibonacci Series
+
+function isFibonacci(n) {
+    let a = 0, b = 1;
+
+    while (a <= n) {
+        if (a === n) return true;
+
+        let temp = a + b;
+        a = b;
+        b = temp;
+    }
+
+    return false;
 }
 
-console.log(a);
+console.log(isFibonacci(21));
+
