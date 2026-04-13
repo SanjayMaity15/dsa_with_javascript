@@ -28,7 +28,6 @@
 // let result = gcd(n1, n2) === 1 ? "Co-prime" : "not"
 // console.log(result);
 
-
 // ! Print Fibonacci Series up to N Terms
 
 // let n = 10;
@@ -43,7 +42,6 @@
 
 // }
 
-
 // ! Find the Nth Fibonacci Number
 
 // let n = 8;
@@ -51,7 +49,7 @@
 // let b = 1;
 
 // for (let i = 1; i <= n; i++){
-    
+
 //     let temp = a + b;
 //     a = b;
 //     b = temp;
@@ -60,22 +58,41 @@
 
 // console.log(a);
 
-
 // ! Check if a Number Belongs to the Fibonacci Series
 
-function isFibonacci(n) {
-    let a = 0, b = 1;
+// function isFibonacci(n) {
+//     let a = 0, b = 1;
 
-    while (a <= n) {
-        if (a === n) return true;
+//     while (a <= n) {
+//         if (a === n) return true;
 
-        let temp = a + b;
-        a = b;
-        b = temp;
-    }
+//         let temp = a + b;
+//         a = b;
+//         b = temp;
+//     }
 
-    return false;
+//     return false;
+// }
+
+// console.log(isFibonacci(21));
+
+// ! Print All Prime Numbers up to N
+
+let n = 20;
+
+function isPrime(n) {
+
+	for (let i = 2; i < n; i++) {
+		if (n % i === 0) {
+			return;
+		}
+	}
+
+	return n;
 }
 
-console.log(isFibonacci(21));
-
+for (let i = 2; i <= n; i++) {
+    let result = isPrime(i)
+    if (result !== undefined)
+        console.log(result);
+}
