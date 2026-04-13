@@ -31,14 +31,31 @@
 
 // ! Print Fibonacci Series up to N Terms
 
-let n = 10;
+// let n = 10;
+// let a = 0;
+// let b = 1;
+
+// for (let i = 1; i <= n; i++){
+//     console.log(a);
+//     let temp = a + b;
+//     a = b;
+//     b = temp;
+
+// }
+
+
+// ! Find the Nth Fibonacci Number
+
+let n = 8;
 let a = 0;
 let b = 1;
 
 for (let i = 1; i <= n; i++){
-    console.log(a);
+    
     let temp = a + b;
     a = b;
     b = temp;
 
 }
+
+console.log(a);
