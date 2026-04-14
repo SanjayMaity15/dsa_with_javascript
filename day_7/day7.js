@@ -65,20 +65,39 @@
 
 
 
-function decimalToOctal(n) {
-	let octal = 0;
-	let place = 1;
+// function decimalToOctal(n) {
+// 	let octal = 0;
+// 	let place = 1;
 
-	while (n !== 0) {
-		let remainder = n % 8;
+// 	while (n !== 0) {
+// 		let remainder = n % 8;
 
-		octal = remainder * place + octal;
+// 		octal = remainder * place + octal;
 
-		place *= 10;
+// 		place *= 10;
 
-		n = Math.floor(n / 8);
-	}
-	return octal;
+// 		n = Math.floor(n / 8);
+// 	}
+// 	return octal;
+// }
+
+// console.log(decimalToOctal(445));
+
+
+
+function decimalToHex(n) {
+    let hex = "";
+    let map = "0123456789ABCDEF";
+
+    while (n > 0) {
+        let remainder = n % 16;
+
+        hex = map[remainder] + hex;
+
+        n = Math.floor(n / 16);
+    }
+
+    return hex
 }
 
-console.log(decimalToOctal(445));
+console.log(decimalToHex(255)); 
