@@ -45,20 +45,40 @@
 
 // ! Number Base Conversion (Any Base to Any Base)
 
-function decimalToBinary(n) {
-	let binary = 0;
+// function decimalToBinary(n) {
+// 	let binary = 0;
+// 	let place = 1;
+
+// 	while (n !== 0) {
+// 		let remainder = n % 2;
+
+// 		binary = remainder * place + binary;
+
+// 		place *= 10;
+
+// 		n = Math.floor(n / 2);
+// 	}
+// 	return binary;
+// }
+
+// console.log(decimalToBinary(10));
+
+
+
+function decimalToOctal(n) {
+	let octal = 0;
 	let place = 1;
 
 	while (n !== 0) {
-		let remainder = n % 2;
+		let remainder = n % 8;
 
-		binary = remainder * place + binary;
+		octal = remainder * place + octal;
 
 		place *= 10;
 
-		n = Math.floor(n / 2);
+		n = Math.floor(n / 8);
 	}
-	return binary;
+	return octal;
 }
 
-console.log(decimalToBinary(10));
+console.log(decimalToOctal(445));
