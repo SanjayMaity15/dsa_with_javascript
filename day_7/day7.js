@@ -22,25 +22,43 @@
 
 // console.log(factors);
 
-
 // ! Find the Product of All Distinct Prime Factors
 
-let n = 150
-let ans = 1;
+// let n = 150
+// let ans = 1;
 
+// for (let i = 2; i <= Math.sqrt(n); i++){
+//     if (n % i === 0) {
+//         ans *= i;
 
-for (let i = 2; i <= Math.sqrt(n); i++){
-    if (n % i === 0) {
-        ans *= i;
+//         while (n % i === 0) {
+//             n /= i
+//         }
+//     }
+// }
 
-        while (n % i === 0) {
-            n /= i
-        }
-    }
+// if (n > 1) {
+//     ans *= n;
+// }
+
+// console.log(ans);
+
+// ! Number Base Conversion (Any Base to Any Base)
+
+function decimalToBinary(n) {
+	let binary = 0;
+	let place = 1;
+
+	while (n !== 0) {
+		let remainder = n % 2;
+
+		binary = remainder * place + binary;
+
+		place *= 10;
+
+		n = Math.floor(n / 2);
+	}
+	return binary;
 }
 
-if (n > 1) {
-    ans *= n;
-}
-
-console.log(ans);
+console.log(decimalToBinary(10));
