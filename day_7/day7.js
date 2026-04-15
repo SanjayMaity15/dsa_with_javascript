@@ -102,20 +102,30 @@
 
 // console.log(decimalToHex(255)); // FF
 
-function binaryToDecimal(n) {
-    let decimal = 0;
-    let base = 1; 
+// function binaryToDecimal(n) {
+//     let decimal = 0;
+//     let base = 1;
 
-    while (n > 0) {
-        let digit = n % 10;
+//     while (n > 0) {
+//         let digit = n % 10;
 
-        decimal += digit * base;
+//         decimal += digit * base;
 
-        base = base * 2;
-        n = Math.floor(n / 10);
-    }
+//         base = base * 2;
+//         n = Math.floor(n / 10);
+//     }
 
-    return decimal;
-}
+//     return decimal;
+// }
 
-console.log(binaryToDecimal(1010));
+// console.log(binaryToDecimal(1010));
+
+
+// !  Swap Variable without using third variable
+
+let a = 10;
+let b = 20;
+
+[a, b] = [b, a]
+
+console.log({a, b});
