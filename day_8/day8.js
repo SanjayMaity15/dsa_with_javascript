@@ -27,9 +27,26 @@
 
 //  ! Count Frequency of Each Character
 
+// let str = "banana"
+
+// let freq = {}
+
+// for (let el of str) {
+//     if (freq.hasOwnProperty(el)) {
+//         freq[el] = freq[el] + 1
+//     } else {
+//         freq[el] = 1
+//     }
+// }
+
+// console.log(freq);
+
+// !  Find the Most Frequent Character in a String
+
 let str = "banana"
 
 let freq = {}
+let mostFreqChar = "", mostFreqCharCount = 0;
 
 for (let el of str) {
     if (freq.hasOwnProperty(el)) {
@@ -39,4 +56,13 @@ for (let el of str) {
     }
 }
 
-console.log(freq);
+
+for (let key in freq) {
+    if (freq[key] > mostFreqCharCount) {
+        mostFreqChar = key;
+        mostFreqCharCount = freq[key]
+    }
+}
+
+
+console.log({mostFreqChar, mostFreqCharCount});
