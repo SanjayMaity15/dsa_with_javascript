@@ -85,19 +85,37 @@
 
 
 
-function decimalToHex(n) {
-    let hex = "";
-    let map = "0123456789ABCDEF";
+// function decimalToHex(n) {
+//     let hex = "";
+//     let map = "0123456789ABCDEF";
+
+//     while (n > 0) {
+//         let remainder = n % 16;
+
+//         hex = map[remainder] + hex;
+
+//         n = Math.floor(n / 16);
+//     }
+
+//     return hex
+// }
+
+// console.log(decimalToHex(255)); // FF
+
+function binaryToDecimal(n) {
+    let decimal = 0;
+    let base = 1; 
 
     while (n > 0) {
-        let remainder = n % 16;
+        let digit = n % 10;
 
-        hex = map[remainder] + hex;
+        decimal += digit * base;
 
-        n = Math.floor(n / 16);
+        base = base * 2;
+        n = Math.floor(n / 10);
     }
 
-    return hex
+    return decimal;
 }
 
-console.log(decimalToHex(255)); 
+console.log(binaryToDecimal(1010));
