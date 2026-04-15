@@ -13,16 +13,30 @@
 
 // !  Check if a String is a Palindrome
 
-let str = "madam"
+// let str = "madam"
 
-let revStr = ""
+// let revStr = ""
 
-for (let i = str.length - 1; i >= 0; i--){
-    revStr += str.charAt(i)
+// for (let i = str.length - 1; i >= 0; i--){
+//     revStr += str.charAt(i)
+// }
+
+// let result = str === revStr ? "Palindrome" : "Not"
+
+// console.log(result);
+
+//  ! Count Frequency of Each Character
+
+let str = "banana"
+
+let freq = {}
+
+for (let el of str) {
+    if (freq.hasOwnProperty(el)) {
+        freq[el] = freq[el] + 1
+    } else {
+        freq[el] = 1
+    }
 }
 
-let result = str === revStr ? "Palindrome" : "Not"
-
-console.log(result);
-
-
+console.log(freq);
