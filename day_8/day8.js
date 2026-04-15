@@ -100,22 +100,38 @@
 
 //  !  Find the First Non-Repeating Character
 
-let str = "ewedskweleknmv"
+// let str = "ewedskweleknmv"
 
-let freq = {}
+// let freq = {}
 
-for (let char of str) {
-	if (freq.hasOwnProperty(char)) {
-		freq[char] = freq[char] + 1;
-	} else {
-		freq[char] = 1;
-	}
-}
+// for (let char of str) {
+// 	if (freq.hasOwnProperty(char)) {
+// 		freq[char] = freq[char] + 1;
+// 	} else {
+// 		freq[char] = 1;
+// 	}
+// }
 
 
-for (let char of str) {
-    if (freq[char] === 1) {
-        console.log(char);
-        break
-    }
-}
+// for (let char of str) {
+//     if (freq[char] === 1) {
+//         console.log(char);
+//         break
+//     }
+// }
+
+//  ! Remove All Duplicate Characters (Keep First Occurrence)
+
+// let str = "programming"
+
+// let afterRemoveDuplicate = ""
+
+// for (let i = 0; i < str.length; i++){
+//     if (afterRemoveDuplicate.includes(str.charAt(i))) {
+//         continue
+//     } else {
+//         afterRemoveDuplicate += str.charAt(i)
+//     }
+// }
+
+// console.log(afterRemoveDuplicate);
