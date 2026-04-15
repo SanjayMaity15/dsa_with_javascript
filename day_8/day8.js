@@ -66,17 +66,45 @@
 
 // ! Check if Two Strings Are Anagrams (Without Sorting)
 
-let str1 = "listen";
-let str2 = "silent";
-let freq = {};
-let isAnagram = true;
+// let str1 = "listen";
+// let str2 = "silent";
+// let freq = {};
+// let isAnagram = true;
 
-if (str1.length !== str2.length) {
-	isAnagram = false;
-	return;
-}
+// if (str1.length !== str2.length) {
+// 	isAnagram = false;
+// 	return;
+// }
 
-for (let char of str1) {
+// for (let char of str1) {
+// 	if (freq.hasOwnProperty(char)) {
+// 		freq[char] = freq[char] + 1;
+// 	} else {
+// 		freq[char] = 1;
+// 	}
+// }
+
+// for (let char of str2) {
+//     if (!freq[char]) {
+//         isAnagram = false
+//         break
+//     }
+
+//     freq[char]--
+//     console.log(freq);
+// }
+
+// console.log(isAnagram);
+
+
+
+//  !  Find the First Non-Repeating Character
+
+let str = "ewedskweleknmv"
+
+let freq = {}
+
+for (let char of str) {
 	if (freq.hasOwnProperty(char)) {
 		freq[char] = freq[char] + 1;
 	} else {
@@ -84,14 +112,10 @@ for (let char of str1) {
 	}
 }
 
-for (let char of str2) {
-    if (!freq[char]) {
-        isAnagram = false
+
+for (let char of str) {
+    if (freq[char] === 1) {
+        console.log(char);
         break
     }
-
-    freq[char]--
-    console.log(freq);
 }
-
-console.log(isAnagram);
