@@ -10,7 +10,6 @@
 
 // console.log(revStr);
 
-
 // !  Check if a String is a Palindrome
 
 // let str = "madam"
@@ -43,26 +42,56 @@
 
 // !  Find the Most Frequent Character in a String
 
-let str = "banana"
+// let str = "banana"
 
-let freq = {}
-let mostFreqChar = "", mostFreqCharCount = 0;
+// let freq = {}
+// let mostFreqChar = "", mostFreqCharCount = 0;
 
-for (let el of str) {
-    if (freq.hasOwnProperty(el)) {
-        freq[el] = freq[el] + 1
-    } else {
-        freq[el] = 1
-    }
+// for (let el of str) {
+//     if (freq.hasOwnProperty(el)) {
+//         freq[el] = freq[el] + 1
+//     } else {
+//         freq[el] = 1
+//     }
+// }
+
+// for (let key in freq) {
+//     if (freq[key] > mostFreqCharCount) {
+//         mostFreqChar = key;
+//         mostFreqCharCount = freq[key]
+//     }
+// }
+
+// console.log({mostFreqChar, mostFreqCharCount});
+
+// ! Check if Two Strings Are Anagrams (Without Sorting)
+
+let str1 = "listen";
+let str2 = "silent";
+let freq = {};
+let isAnagram = true;
+
+if (str1.length !== str2.length) {
+	isAnagram = false;
+	return;
 }
 
-
-for (let key in freq) {
-    if (freq[key] > mostFreqCharCount) {
-        mostFreqChar = key;
-        mostFreqCharCount = freq[key]
-    }
+for (let char of str1) {
+	if (freq.hasOwnProperty(char)) {
+		freq[char] = freq[char] + 1;
+	} else {
+		freq[char] = 1;
+	}
 }
 
+for (let char of str2) {
+    if (!freq[char]) {
+        isAnagram = false
+        break
+    }
 
-console.log({mostFreqChar, mostFreqCharCount});
+    freq[char]--
+    console.log(freq);
+}
+
+console.log(isAnagram);
