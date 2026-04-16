@@ -135,16 +135,26 @@
 
 // ! Check if a String Contains Only Alphabets (No Regex)
 
-let str = "Sanjay"
+// let str = "Sanjay"
 
-let isAllAlpha = true;
+// let isAllAlpha = true;
 
-for (let el of str) {
-    if (!(el.toLowerCase().charCodeAt() >= 97 && el.toLowerCase().charCodeAt() <= 122)) {
-        isAllAlpha = false;
-        break;
-    }
-}
+// for (let el of str) {
+//     if (!(el.toLowerCase().charCodeAt() >= 97 && el.toLowerCase().charCodeAt() <= 122)) {
+//         isAllAlpha = false;
+//         break;
+//     }
+// }
 
-console.log(isAllAlpha);
+// console.log(isAllAlpha);
+
+
+// ! Reverse Only the Words in a Sentence
+
+let str = "I love RCB"
+
+let strArray = str.split(" ").reverse().join(" ")
+
+console.log(strArray);
+
 
