@@ -96,8 +96,6 @@
 
 // console.log(isAnagram);
 
-
-
 //  !  Find the First Non-Repeating Character
 
 // let str = "ewedskweleknmv"
@@ -111,7 +109,6 @@
 // 		freq[char] = 1;
 // 	}
 // }
-
 
 // for (let char of str) {
 //     if (freq[char] === 1) {
@@ -135,3 +132,19 @@
 // }
 
 // console.log(afterRemoveDuplicate);
+
+// ! Check if a String Contains Only Alphabets (No Regex)
+
+let str = "Sanjay"
+
+let isAllAlpha = true;
+
+for (let el of str) {
+    if (!(el.toLowerCase().charCodeAt() >= 97 && el.toLowerCase().charCodeAt() <= 122)) {
+        isAllAlpha = false;
+        break;
+    }
+}
+
+console.log(isAllAlpha);
+
