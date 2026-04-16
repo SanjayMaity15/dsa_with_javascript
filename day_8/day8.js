@@ -151,10 +151,30 @@
 
 // ! Reverse Only the Words in a Sentence
 
-let str = "I love RCB"
+// let str = "I love RCB"
 
-let strArray = str.split(" ").reverse().join(" ")
+// let strArray = str.split(" ").reverse().join(" ")
 
-console.log(strArray);
+// console.log(strArray);
+
+
+// ! Find the Longest Word in a Sentence
+
+let str = "Coding is beautiful"
+
+let strArray = str.split(" ")
+
+let lognestWordLen = 0;
+let lognestWord = ""
+
+for (let el of strArray) {
+    if (el.length > lognestWordLen) {
+        lognestWordLen = el.length;
+        lognestWord = el
+    }
+}
+
+console.log({lognestWordLen, lognestWord});
+
 
 
