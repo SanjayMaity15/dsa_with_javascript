@@ -160,21 +160,31 @@
 
 // ! Find the Longest Word in a Sentence
 
-let str = "Coding is beautiful"
+// let str = "Coding is beautiful"
 
-let strArray = str.split(" ")
+// let strArray = str.split(" ")
 
-let lognestWordLen = 0;
-let lognestWord = ""
+// let lognestWordLen = 0;
+// let lognestWord = ""
 
-for (let el of strArray) {
-    if (el.length > lognestWordLen) {
-        lognestWordLen = el.length;
-        lognestWord = el
-    }
-}
+// for (let el of strArray) {
+//     if (el.length > lognestWordLen) {
+//         lognestWordLen = el.length;
+//         lognestWord = el
+//     }
+// }
 
-console.log({lognestWordLen, lognestWord});
+// console.log({lognestWordLen, lognestWord});
+
+
+// ! Count the Number of Words
+
+let str = "There is a manogo tree"
+
+let word = str.split(/\W/).length
+
+console.log({ word });
+
 
 
 
