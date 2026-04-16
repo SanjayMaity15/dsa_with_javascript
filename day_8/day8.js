@@ -188,14 +188,37 @@
 
 // ! Find All Substrings of a String
 
-let str = "abc";
+// let str = "abc";
 
-for (let i = 0; i < str.length; i++) {
-	for (let j = i + 1; j <= str.length; j++) {
-		console.log(str.slice(i, j));
+// for (let i = 0; i < str.length; i++) {
+// 	for (let j = i + 1; j <= str.length; j++) {
+// 		console.log(str.slice(i, j));
+// 	}
+// }
+
+
+
+// ! Compress a String (Basic Run-Length Encoding)
+
+
+function compressString(str) {
+	if (!str) return "";
+
+	let result = "";
+	let count = 1;
+
+	for (let i = 0; i < str.length; i++) {
+		if (str[i] === str[i + 1]) {
+			count++;
+		} else {
+			result += str[i] + count;
+			count = 1;
+		}
 	}
+
+	return result;
 }
 
 
-
+console.log(compressString("aaabbccccd"));
 
