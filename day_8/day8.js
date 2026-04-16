@@ -179,11 +179,22 @@
 
 // ! Count the Number of Words
 
-let str = "There is a manogo tree"
+// let str = "There is a manogo tree"
 
-let word = str.split(/\W/).length
+// let word = str.split(/\W/).length
 
-console.log({ word });
+// console.log({ word });
+
+
+// ! Find All Substrings of a String
+
+let str = "abc";
+
+for (let i = 0; i < str.length; i++) {
+	for (let j = i + 1; j <= str.length; j++) {
+		console.log(str.slice(i, j));
+	}
+}
 
 
 
