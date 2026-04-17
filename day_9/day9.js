@@ -95,17 +95,33 @@
 
 // ! Check If a String Is a Pangram
 
-let str = "The quick brown fox jumps over the lazy dog";
+// let str = "The quick brown fox jumps over the lazy dog";
 
-let alpha = "abcdefghijklmnopqrstuvwxyz"
+// let alpha = "abcdefghijklmnopqrstuvwxyz"
 
-let result = true
+// let result = true
 
-for (let el of alpha) {
-    if (!str.toLowerCase().includes(el)) {
-        result = false
-        break 
+// for (let el of alpha) {
+//     if (!str.toLowerCase().includes(el)) {
+//         result = false
+//         break
+//     }
+// }
+
+// console.log(result);
+
+// !  Remove All Duplicate Words From a Sentence
+
+let str = "this is is a test test string";
+let strArray = str.split(" ")
+
+let result = []
+
+for (let el of strArray) {
+    console.log(el);
+    if (!result.includes(el)) {
+        result.push(el)
     }
 }
 
-console.log(result);
+console.log(result.join(" "));
