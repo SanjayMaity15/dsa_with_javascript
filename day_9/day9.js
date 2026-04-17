@@ -76,18 +76,36 @@
 
 // ! Count Frequency of Each Word in a Sentence
 
-let str = "i love coding and i love javascript";
+// let str = "i love coding and i love javascript";
 
-let strArray = str.toLowerCase().split(" ")
+// let strArray = str.toLowerCase().split(" ")
 
-let obj = {}
+// let obj = {}
 
-for (let el of strArray) {
-    if (obj.hasOwnProperty(el)) {
-        obj[el] = obj[el]  + 1
-    } else {
-        obj[el] = 1
+// for (let el of strArray) {
+//     if (obj.hasOwnProperty(el)) {
+//         obj[el] = obj[el]  + 1
+//     } else {
+//         obj[el] = 1
+//     }
+// }
+
+// console.log(obj);
+
+
+// ! Check If a String Is a Pangram
+
+let str = "The quick brown fox jumps over the lazy dog";
+
+let alpha = "abcdefghijklmnopqrstuvwxyz"
+
+let result = true
+
+for (let el of alpha) {
+    if (!str.toLowerCase().includes(el)) {
+        result = false
+        break 
     }
 }
 
-console.log(obj);
+console.log(result);
