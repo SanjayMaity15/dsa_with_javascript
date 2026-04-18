@@ -67,25 +67,3 @@
 - **Output:** `"this is a test string"`
   ✨ _Track seen words, build cleaned sentence._
 
----
-
-### **4️⃣ Find the Longest Palindromic Substring (Brute Force Allowed)**
-
-- **Input:** `"babad"`
-- **Output:** `"bab"` or `"aba"`
-  ✨ _Check all substrings; teaches brute-force reasoning._
-
----
-
-### **5️⃣ Find All Anagram Pairs in an Array of Strings**
-
-- **Input:** `["cat", "tac", "act", "dog"]`
-- **Output:** `["cat","tac","act"]`
-
----
-
-### **6️⃣ Find the Longest Substring Without Repeating Characters (Sliding Window)**
-
-- **Input:** `"abcabcbb"`
-- **Output:** `"abc"`
-  ✨ _Introduction to sliding windows, hash maps, and window shrinking logic._
