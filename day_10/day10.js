@@ -19,13 +19,30 @@
 
 // !  Reverse an Array (Manual Method Only)
 
+// let arr = [1, 2, 3, 4, 5];
+
+// for (let i = 0; i < arr.length / 2; i++){
+//     let temp = arr[i]
+//     arr[i] = arr[arr.length - i - 1]
+//     arr[arr.length - i - 1] = temp
+// }
+
+// console.log(arr);
+
+// ! Check if an Array is Sorted (Ascending)
+
 let arr = [1, 2, 3, 4, 5];
 
-for (let i = 0; i < arr.length / 2; i++){
-    let temp = arr[i]
-    arr[i] = arr[arr.length - i - 1]
-    arr[arr.length - i - 1] = temp
+let great = arr[0]
+let isSorted = true
+
+for (let el of arr) {
+    if (great <= el) {
+        great = el
+    } else {
+        isSorted = false
+        break
+    }
 }
 
-
-console.log(arr);
+console.log(isSorted);
