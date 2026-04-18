@@ -31,18 +31,35 @@
 
 // ! Check if an Array is Sorted (Ascending)
 
-let arr = [1, 2, 3, 4, 5];
+// let arr = [1, 2, 3, 4, 5];
 
-let great = arr[0]
-let isSorted = true
+// let great = arr[0]
+// let isSorted = true
 
-for (let el of arr) {
-    if (great <= el) {
-        great = el
-    } else {
-        isSorted = false
-        break
-    }
-}
+// for (let el of arr) {
+//     if (great <= el) {
+//         great = el
+//     } else {
+//         isSorted = false
+//         break
+//     }
+// }
 
-console.log(isSorted);
+// console.log(isSorted);
+
+
+
+// !  Remove All Duplicates From an Array (Use filter method)
+
+let arr = [1, 2, 2, 3, 3, 4]
+
+
+const filterArray = arr.filter((item, index) => {
+
+    // console.log(arr.indexOf(item));
+    console.log(index);
+    // return arr.indexOf(item) === index
+})
+
+console.log(filterArray);
+
