@@ -76,7 +76,6 @@
 //     }
 // }
 
-
 // ! Rotate an Array to the Right by K Steps
 
 // let arr = [1, 2, 3, 4, 5]
@@ -128,18 +127,33 @@
 // console.log(even);
 // console.log(odd);
 
-
 // ! Find All Unique Pairs Whose Sum Equals a Target
 
-let arr = [1, 2, 3, 4, 5]
-let target = 6;
+// let arr = [1, 2, 3, 4, 5]
+// let target = 6;
 
-for (let i = 0; i < arr.length; i++){
-    
+// for (let i = 0; i < arr.length; i++){
 
-    for (let j = i + 1; j < arr.length; j++){
-        if (arr[i] + arr[j] === target) {
-            console.log(arr[i], arr[j]);
-        }    
-    }
+//     for (let j = i + 1; j < arr.length; j++){
+//         if (arr[i] + arr[j] === target) {
+//             console.log(arr[i], arr[j]);
+//         }
+//     }
+// }
+
+// ! Left Shift an Array by One Position
+
+let arr = [1, 2, 3, 4];
+
+for (let i = 0; i < 1; i++) {
+	let firstElem = arr[i];
+
+	for (let j = 0; j < arr.length - 1; j++) {
+		arr[j] = arr[j + 1];
+	}
+
+	arr[arr.length - 1] = firstElem;
 }
+
+
+console.log(arr);
