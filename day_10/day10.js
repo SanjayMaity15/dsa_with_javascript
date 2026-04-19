@@ -143,17 +143,32 @@
 
 // ! Left Shift an Array by One Position
 
-let arr = [1, 2, 3, 4];
+// let arr = [1, 2, 3, 4];
 
-for (let i = 0; i < 1; i++) {
-	let firstElem = arr[i];
+// for (let i = 0; i < 1; i++) {
+// 	let firstElem = arr[i];
 
-	for (let j = 0; j < arr.length - 1; j++) {
-		arr[j] = arr[j + 1];
-	}
+// 	for (let j = 0; j < arr.length - 1; j++) {
+// 		arr[j] = arr[j + 1];
+// 	}
 
-	arr[arr.length - 1] = firstElem;
+// 	arr[arr.length - 1] = firstElem;
+// }
+
+// console.log(arr);
+
+// ! Count How Many Times an Element Appears in an Array
+
+let arr = [1, 2, 3, 4, 3, 5, 6, 3, 3];
+
+
+let target = 3;
+let count = 0;
+
+for (let el of arr) {
+    if (el === target) {
+        count++
+    }
 }
 
-
-console.log(arr);
+console.log(count);
