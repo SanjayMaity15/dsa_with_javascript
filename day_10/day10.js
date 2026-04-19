@@ -62,16 +62,34 @@
 
 // !  Find the Second Largest Element
 
-let arr = [234, 5, 3, 656, 34, 456, 78, 43];
+// let arr = [234, 5, 3, 656, 34, 456, 78, 43];
 
-let largestElem = -Infinity
-let secondLargest = -Infinity;
+// let largestElem = -Infinity
+// let secondLargest = -Infinity;
 
-for (let el of arr) {
-    if (el > largestElem) {
-        secondLargest = largestElem
-        largestElem = el
-    } else if (el > secondLargest && el < largestElem) {
-        secondLargest = el
+// for (let el of arr) {
+//     if (el > largestElem) {
+//         secondLargest = largestElem
+//         largestElem = el
+//     } else if (el > secondLargest && el < largestElem) {
+//         secondLargest = el
+//     }
+// }
+
+
+// ! Rotate an Array to the Right by K Steps
+
+let arr = [1, 2, 3, 4, 5]
+let k = 2;
+
+for (let i = 1; i <= k; i++){
+    let lastElem = arr[arr.length - 1]
+
+    for (let j = arr.length - 1; j > 0; j--){
+        arr[j] = arr[j - 1]
     }
+
+    arr[0] = lastElem
 }
+
+console.log(arr);
