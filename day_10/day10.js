@@ -112,18 +112,34 @@
 
 // !  Count Even and Odd Numbers in an Array
 
-let arr = [12, 34, 6, 67, 3, 657]
+// let arr = [12, 34, 6, 67, 3, 657]
 
-let odd = []
-let even = []
+// let odd = []
+// let even = []
 
-for (let el of arr) {
-    if (el % 2 === 0) {
-        even.push(el)
-    }else{
-        odd.push(el)
+// for (let el of arr) {
+//     if (el % 2 === 0) {
+//         even.push(el)
+//     }else{
+//         odd.push(el)
+//     }
+// }
+
+// console.log(even);
+// console.log(odd);
+
+
+// ! Find All Unique Pairs Whose Sum Equals a Target
+
+let arr = [1, 2, 3, 4, 5]
+let target = 6;
+
+for (let i = 0; i < arr.length; i++){
+    
+
+    for (let j = i + 1; j < arr.length; j++){
+        if (arr[i] + arr[j] === target) {
+            console.log(arr[i], arr[j]);
+        }    
     }
 }
-
-console.log(even);
-console.log(odd);
