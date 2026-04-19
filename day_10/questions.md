@@ -43,12 +43,6 @@
 
 ---
 
-### 5️⃣ Merge Two Arrays Without Using concat or spread
-
-* **Input:** `[1, 2, 3]` and `[4, 5]`
-* **Output:** `[1, 2, 3, 4, 5]`
-
----
 
 # 🏠 Homework Questions (7 Problems)
 
