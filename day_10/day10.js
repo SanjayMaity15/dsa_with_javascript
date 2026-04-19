@@ -96,20 +96,34 @@
 
 // ! Check if Two Arrays Are Equal (Same Order)
 
-let arr1 = [1, 2, 3]
-let arr2 = [1, 2, 3]
+// let arr1 = [1, 2, 3]
+// let arr2 = [1, 2, 3]
 
-let isEqual = true
+// let isEqual = true
 
-// if (arr1.length !== arr2.length) {
-//     return
+// for (let i = 0; i < arr1.length; i++) {
+//     if (arr1[i] !== arr2[i]) {
+//         isEqual = false
+//         break
+//     }
 // }
 
-for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-        isEqual = false
-        break
+// console.log(isEqual);
+
+// !  Count Even and Odd Numbers in an Array
+
+let arr = [12, 34, 6, 67, 3, 657]
+
+let odd = []
+let even = []
+
+for (let el of arr) {
+    if (el % 2 === 0) {
+        even.push(el)
+    }else{
+        odd.push(el)
     }
 }
 
-console.log(isEqual);
+console.log(even);
+console.log(odd);
