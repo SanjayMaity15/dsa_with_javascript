@@ -47,19 +47,31 @@
 
 // console.log(isSorted);
 
-
-
 // !  Remove All Duplicates From an Array (Use filter method)
 
-let arr = [1, 2, 2, 3, 3, 4]
+// let arr = [1, 2, 2, 3, 3, 4]
 
+// const filterArray = arr.filter((item, index) => {
 
-const filterArray = arr.filter((item, index) => {
+//     // console.log(arr.indexOf(item));
+//     console.log(index);
+//     // return arr.indexOf(item) === index
+// })
 
-    // console.log(arr.indexOf(item));
-    console.log(index);
-    // return arr.indexOf(item) === index
-})
+// console.log(filterArray);
 
-console.log(filterArray);
+// !  Find the Second Largest Element
 
+let arr = [234, 5, 3, 656, 34, 456, 78, 43];
+
+let largestElem = -Infinity
+let secondLargest = -Infinity;
+
+for (let el of arr) {
+    if (el > largestElem) {
+        secondLargest = largestElem
+        largestElem = el
+    } else if (el > secondLargest && el < largestElem) {
+        secondLargest = el
+    }
+}
