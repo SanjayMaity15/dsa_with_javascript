@@ -79,17 +79,37 @@
 
 // ! Rotate an Array to the Right by K Steps
 
-let arr = [1, 2, 3, 4, 5]
-let k = 2;
+// let arr = [1, 2, 3, 4, 5]
+// let k = 2;
 
-for (let i = 1; i <= k; i++){
-    let lastElem = arr[arr.length - 1]
+// for (let i = 1; i <= k; i++){
+//     let lastElem = arr[arr.length - 1]
 
-    for (let j = arr.length - 1; j > 0; j--){
-        arr[j] = arr[j - 1]
+//     for (let j = arr.length - 1; j > 0; j--){
+//         arr[j] = arr[j - 1]
+//     }
+
+//     arr[0] = lastElem
+// }
+
+// console.log(arr);
+
+// ! Check if Two Arrays Are Equal (Same Order)
+
+let arr1 = [1, 2, 3]
+let arr2 = [1, 2, 3]
+
+let isEqual = true
+
+// if (arr1.length !== arr2.length) {
+//     return
+// }
+
+for (let i = 0; i < arr1.length; i++) {
+    if (arr1[i] !== arr2[i]) {
+        isEqual = false
+        break
     }
-
-    arr[0] = lastElem
 }
 
-console.log(arr);
+console.log(isEqual);
