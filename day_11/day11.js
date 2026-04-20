@@ -20,41 +20,61 @@
 
 // ! Move All Zeroes to End (Stable, O(n))
 
-function moveAllZeros(arr) {
-	let nonZero = [];
-	let zero = [];
+// function moveAllZeros(arr) {
+// 	let nonZero = [];
+// 	let zero = [];
 
-	for (let el of arr) {
-		if (el === 0) {
-			zero.push(el);
-		} else {
-			nonZero.push(el);
-		}
-	}
+// 	for (let el of arr) {
+// 		if (el === 0) {
+// 			zero.push(el);
+// 		} else {
+// 			nonZero.push(el);
+// 		}
+// 	}
 
-	return [...nonZero, ...zero];
-}
+// 	return [...nonZero, ...zero];
+// }
 
-console.log(moveAllZeros([0, 1, 0, 3, 12]));
+// console.log(moveAllZeros([0, 1, 0, 3, 12]));
 
 // 2nd solution
 
-function moveAllZeros(arr) {
-	let insertPos = 0;
+// function moveAllZeros(arr) {
+// 	let insertPos = 0;
 
-	for (let i = 0; i < arr.length; i++) {
-		if (arr[i] !== 0) {
-			arr[insertPos] = arr[i];
-			insertPos++;
-		}
-	}
+// 	for (let i = 0; i < arr.length; i++) {
+// 		if (arr[i] !== 0) {
+// 			arr[insertPos] = arr[i];
+// 			insertPos++;
+// 		}
+// 	}
 
-	while (insertPos < arr.length) {
-		arr[insertPos] = 0;
-		insertPos++;
-	}
+// 	while (insertPos < arr.length) {
+// 		arr[insertPos] = 0;
+// 		insertPos++;
+// 	}
 
-	return arr;
+// 	return arr;
+// }
+
+// console.log(moveAllZeros([0, 1, 0, 3, 12]));
+
+
+// ! Find the First Repeating Element in an Array
+
+function firstRepeatingElem(arr) {
+    
+    const set = new Set([])
+
+    for (let el of arr) {
+        
+        if (set.has(el)) {
+            return el
+        } else {
+            set.add(el)
+        }
+    }
+
 }
 
-console.log(moveAllZeros([0, 1, 0, 3, 12]));
+console.log(firstRepeatingElem([10, 5, 3, 4, 3, 5, 6]));
