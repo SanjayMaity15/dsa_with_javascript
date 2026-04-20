@@ -59,22 +59,53 @@
 
 // console.log(moveAllZeros([0, 1, 0, 3, 12]));
 
-
 // ! Find the First Repeating Element in an Array
 
-function firstRepeatingElem(arr) {
-    
-    const set = new Set([])
+// function firstRepeatingElem(arr) {
 
-    for (let el of arr) {
-        
-        if (set.has(el)) {
-            return el
-        } else {
-            set.add(el)
-        }
-    }
+//     const set = new Set([])
 
+//     for (let el of arr) {
+
+//         if (set.has(el)) {
+//             return el
+//         } else {
+//             set.add(el)
+//         }
+//     }
+
+// }
+
+// console.log(firstRepeatingElem([10, 5, 3, 4, 3, 5, 6]));
+
+// ! Maximum Subarray Sum (Kadane’s Algorithm – O(n))
+
+function maximumSubArray(arr) {
+	let maximumSum = arr[0];
+	let currentSum = arr[0];
+
+	let start, end, temp;
+
+	
+
+	for (let i = 1; i < arr.length; i++) {
+		if (arr[i] > arr[i] + currentSum) {
+			currentSum = arr[i];
+			temp = i;
+		} else {
+			currentSum += arr[i];
+		}
+
+		if (currentSum > maximumSum) {
+			maximumSum = currentSum;
+			start = temp;
+			end = i;
+		}
+	}
+
+	let subArray = arr.slice(start, end + 1);
+
+	return { sum: maximumSum, subArray };
 }
 
-console.log(firstRepeatingElem([10, 5, 3, 4, 3, 5, 6]));
+console.log(maximumSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4]));
