@@ -80,32 +80,66 @@
 
 // ! Maximum Subarray Sum (Kadane’s Algorithm – O(n))
 
-function maximumSubArray(arr) {
-	let maximumSum = arr[0];
-	let currentSum = arr[0];
+// function maximumSubArray(arr) {
+// 	let maximumSum = arr[0];
+// 	let currentSum = arr[0];
 
-	let start, end, temp;
+// 	let start, end, temp;
 
-	
+// 	for (let i = 1; i < arr.length; i++) {
+// 		if (arr[i] > arr[i] + currentSum) {
+// 			currentSum = arr[i];
+// 			temp = i;
+// 		} else {
+// 			currentSum += arr[i];
+// 		}
 
-	for (let i = 1; i < arr.length; i++) {
-		if (arr[i] > arr[i] + currentSum) {
-			currentSum = arr[i];
-			temp = i;
-		} else {
-			currentSum += arr[i];
-		}
+// 		if (currentSum > maximumSum) {
+// 			maximumSum = currentSum;
+// 			start = temp;
+// 			end = i;
+// 		}
+// 	}
 
-		if (currentSum > maximumSum) {
-			maximumSum = currentSum;
-			start = temp;
-			end = i;
-		}
-	}
+// 	let subArray = arr.slice(start, end + 1);
 
-	let subArray = arr.slice(start, end + 1);
+// 	return { sum: maximumSum, subArray };
+// }
 
-	return { sum: maximumSum, subArray };
+// console.log(maximumSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4]));
+
+//! Zero sum subarrays
+
+let arr = [6, -1, -3, 4, -2, 2, 4, 6, -12, -7];
+
+// for (let i = 0; i < arr.length; i++) {
+// 	let sum = 0;
+
+// 	for (let j = i; j < arr.length; j++) {
+// 		sum += arr[j];
+
+// 		if (sum === 0) {
+// 			total++;
+// 		}
+// 	}
+// }
+
+
+let total = 0;
+let prefixSum = 0;
+let map = new Map()
+map.set(0, 1)
+
+for (let i = 0; i < arr.length; i++){
+    prefixSum += arr[i]
+
+    if (map.has(prefixSum)) {
+        total += map.get(prefixSum)
+        map.set(prefixSum, map.get(prefixSum) + 1)
+        
+    } else {
+        map.set(prefixSum, 1)
+    }
 }
 
-console.log(maximumSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4]));
+console.log(total);
