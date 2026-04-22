@@ -110,7 +110,7 @@
 
 //! Zero sum subarrays
 
-let arr1 = [6, -1, -3, 4, -2, 2, 4, 6, -12, -7];
+// let arr1 = [6, -1, -3, 4, -2, 2, 4, 6, -12, -7];
 
 // for (let i = 0; i < arr.length; i++) {
 // 	let sum = 0;
@@ -141,25 +141,58 @@ let arr1 = [6, -1, -3, 4, -2, 2, 4, 6, -12, -7];
 
 // console.log(total1);
 
-let arr = [2, 1, 7, -4, 2, 1, 3, 4, -15, 2, -3, 6];
 
-let map = new Map();
-map.set(0, 1);
+// ! subarray sum = k
 
-let total = 0;
+// let arr = [2, 1, 7, -4, 2, 1, 3, 4, -15, 2, -3, 6];
 
-let k = 6;
+// let map = new Map();
+// map.set(0, 1);
 
-let prefixSum = 0;
+// let total = 0;
 
-for (let i = 0; i < arr.length; i++) {
-	prefixSum += arr[i];
+// let k = 6;
 
-	if (map.has(prefixSum - k)) {
-		total += map.get(prefixSum - k);
-	}
+// let prefixSum = 0;
 
-	map.set(prefixSum, (map.get(prefixSum) || 0) + 1);
+// for (let i = 0; i < arr.length; i++) {
+// 	prefixSum += arr[i];
+
+// 	if (map.has(prefixSum - k)) {
+// 		total += map.get(prefixSum - k);
+// 	}
+
+// 	map.set(prefixSum, (map.get(prefixSum) || 0) + 1);
+// }
+
+// console.log(total);
+
+
+// ! Find the maximum sum of any subarray of size k.
+
+let arr = [2, 1, 5, 1, 3, 2]
+let k = 3
+let startIndex = 0;
+let windowSum = 0;
+let maxSum = 0;
+
+for (let i = 0; i < k; i++){
+    windowSum += arr[i]
 }
 
-console.log(total);
+maxSum = windowSum;
+
+for (let j = k; j < arr.length; j++){
+    windowSum += arr[j] - arr[j - k]
+
+    if (windowSum > maxSum) {
+        maxSum = windowSum;
+        startIndex = j - k + 1
+    }
+
+
+}
+
+console.log(arr.slice(startIndex, startIndex + k));
+console.log(maxSum);
+
