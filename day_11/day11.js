@@ -110,7 +110,7 @@
 
 //! Zero sum subarrays
 
-let arr = [6, -1, -3, 4, -2, 2, 4, 6, -12, -7];
+let arr1 = [6, -1, -3, 4, -2, 2, 4, 6, -12, -7];
 
 // for (let i = 0; i < arr.length; i++) {
 // 	let sum = 0;
@@ -124,22 +124,42 @@ let arr = [6, -1, -3, 4, -2, 2, 4, 6, -12, -7];
 // 	}
 // }
 
+// let total1 = 0;
+// let prefixSumm = 0;
+// let map1 = new Map();
+// map1.set(0, 1);
+
+// for (let i = 0; i < arr1.length; i++) {
+// 	prefixSumm += arr1[i];
+
+// 	if (map1.has(prefixSumm)) {
+// 		total1 += map1.get(prefixSumm);
+// 	}
+
+// 	map1.set(prefixSumm, (map1.get(prefixSumm) || 0) + 1);
+// }
+
+// console.log(total1);
+
+let arr = [2, 1, 7, -4, 2, 1, 3, 4, -15, 2, -3, 6];
+
+let map = new Map();
+map.set(0, 1);
 
 let total = 0;
+
+let k = 6;
+
 let prefixSum = 0;
-let map = new Map()
-map.set(0, 1)
 
-for (let i = 0; i < arr.length; i++){
-    prefixSum += arr[i]
+for (let i = 0; i < arr.length; i++) {
+	prefixSum += arr[i];
 
-    if (map.has(prefixSum)) {
-        total += map.get(prefixSum)
-        map.set(prefixSum, map.get(prefixSum) + 1)
-        
-    } else {
-        map.set(prefixSum, 1)
-    }
+	if (map.has(prefixSum - k)) {
+		total += map.get(prefixSum - k);
+	}
+
+	map.set(prefixSum, (map.get(prefixSum) || 0) + 1);
 }
 
 console.log(total);
