@@ -61,7 +61,7 @@
 
 ---
 
-### **4️⃣ Find the Longest Increasing Subarray (Continuous)**
+### **4️⃣ Zero sum sub array count**
 
-- **Input:** `[1, 2, 2, 3, 4, 5]`
-- **Output:** `Length = 4, SubArray = [2, 3, 4, 5]`
+- **Input:** `[6, -1, -3, 4, -2, 2, 4, 6, -12, -7]`
+
