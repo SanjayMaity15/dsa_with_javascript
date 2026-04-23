@@ -276,15 +276,40 @@
 
 // ! Remove Duplicates from Sorted Array
 
-let arr = [1, 2, 3, 4, 4, 6, 9]
+// let arr = [1, 2, 3, 4, 4, 6, 9]
 
-let i = 0;
+// let i = 0;
 
-for (let j = 1; j < arr.length; j++){
-	if (arr[j] !== arr[i]) {
-		i++;
-		arr[i] = arr[j]
+// for (let j = 1; j < arr.length; j++){
+// 	if (arr[j] !== arr[i]) {
+// 		i++;
+// 		arr[i] = arr[j]
+// 	}
+// }
+
+// console.log(arr.slice(0, i + 1));
+
+
+// ! Two Sum II (Sorted Array)
+
+let arr = [2, 7, 11, 15]
+let k = 22;
+
+let left = 0
+let right = arr.length - 1
+
+while (left < right) {
+	
+	let sum = arr[left] + arr[right];
+
+	if (sum === k) {
+		console.log({ left, right });
+		break
+	}
+
+	if (sum > k) {
+		right--
+	} else {
+		left++
 	}
 }
-
-console.log(arr.slice(0, i + 1));
