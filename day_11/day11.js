@@ -231,23 +231,44 @@
 // ! Count the number of subarrays whose product is less than k
 
 
-let arr = [2, 5, 10, 8, 100, 1000, 5, 15];
+// let arr = [2, 5, 10, 8, 100, 1000, 5, 15];
 
-let k = 999;
+// let k = 999;
 
-let count = 0;
-let product = 1;
-let left = 0;
+// let count = 0;
+// let product = 1;
+// let left = 0;
 
-for (let right = 0; right < arr.length; right++) {
-	product *= arr[right];
+// for (let right = 0; right < arr.length; right++) {
+// 	product *= arr[right];
 
-	while (product >= k) {
-		product = product / arr[left];
-		left++;
+// 	while (product >= k) {
+// 		product = product / arr[left];
+// 		left++;
+// 	}
+
+// 	count += right - left + 1;
+// }
+
+// console.log(count);
+
+
+// ! 8️⃣ Move Zeroes (Two Pointer Approach)
+
+let arr = [0, 1, 0, 3, 12]
+
+let pos = 0;
+
+for (let i = 0; i < arr.length; i++){
+	if (arr[i] !== 0) {
+		arr[pos] = arr[i]
+		pos++
 	}
-
-	count += right - left + 1;
 }
 
-console.log(count);
+for (let i = pos; i < arr.length; i++){
+	arr[i] = 0;
+}
+
+
+console.log(arr);
