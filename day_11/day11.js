@@ -199,31 +199,55 @@
 
 // ! Sub array sum divisible by k
 
-let arr = [2, 3, -8, -3, 11, 4, 8, 6, 9, 4]
+// let arr = [2, 3, -8, -3, 11, 4, 8, 6, 9, 4]
 
-let map = new Map()
-map.set(0, 1)
+// let map = new Map()
+// map.set(0, 1)
 
-let prefixSum = 0;
-let total = 0;
-let rem;
-let k = 7;
+// let prefixSum = 0;
+// let total = 0;
+// let rem;
+// let k = 7;
 
-for (let i = 0; i < arr.length; i++){
-    prefixSum += arr[i]
+// for (let i = 0; i < arr.length; i++){
+//     prefixSum += arr[i]
 
-    rem = prefixSum % k;
+//     rem = prefixSum % k;
 
-    if (rem < 0) {
-        rem += k;
-    }
+//     if (rem < 0) {
+//         rem += k;
+//     }
 
-    if (map.has(rem)) {
-        total += map.get(rem)
-    }
+//     if (map.has(rem)) {
+//         total += map.get(rem)
+//     }
 
-    map.set(rem, (map.get(rem) || 0) + 1)
+//     map.set(rem, (map.get(rem) || 0) + 1)
+// }
+
+// console.log(total);
+
+
+// ! Count the number of subarrays whose product is less than k
+
+
+let arr = [2, 5, 10, 8, 100, 1000, 5, 15];
+
+let k = 999;
+
+let count = 0;
+let product = 1;
+let left = 0;
+
+for (let right = 0; right < arr.length; right++) {
+	product *= arr[right];
+
+	while (product >= k) {
+		product = product / arr[left];
+		left++;
+	}
+
+	count += right - left + 1;
 }
 
-console.log(total);
-
+console.log(count);

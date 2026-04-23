@@ -70,3 +70,9 @@
 ### **Find the maximum sum of any subarray of size k.**
 
 arr = [2, 1, 5, 1, 3, 2], k = 3
+
+
+### 👉 Count of subarrays whose sum is divisible by k
+
+
+### Count the number of subarrays whose product is less than k
