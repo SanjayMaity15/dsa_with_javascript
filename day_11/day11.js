@@ -170,29 +170,60 @@
 
 // ! Find the maximum sum of any subarray of size k.
 
-let arr = [2, 1, 5, 1, 3, 2]
-let k = 3
-let startIndex = 0;
-let windowSum = 0;
-let maxSum = 0;
+// let arr = [2, 1, 5, 1, 3, 2]
+// let k = 3
+// let startIndex = 0;
+// let windowSum = 0;
+// let maxSum = 0;
 
-for (let i = 0; i < k; i++){
-    windowSum += arr[i]
-}
+// for (let i = 0; i < k; i++){
+//     windowSum += arr[i]
+// }
 
-maxSum = windowSum;
+// maxSum = windowSum;
 
-for (let j = k; j < arr.length; j++){
-    windowSum += arr[j] - arr[j - k]
+// for (let j = k; j < arr.length; j++){
+//     windowSum += arr[j] - arr[j - k]
 
-    if (windowSum > maxSum) {
-        maxSum = windowSum;
-        startIndex = j - k + 1
+//     if (windowSum > maxSum) {
+//         maxSum = windowSum;
+//         startIndex = j - k + 1
+//     }
+
+
+// }
+
+// console.log(arr.slice(startIndex, startIndex + k));
+// console.log(maxSum);
+
+
+// ! Sub array sum divisible by k
+
+let arr = [2, 3, -8, -3, 11, 4, 8, 6, 9, 4]
+
+let map = new Map()
+map.set(0, 1)
+
+let prefixSum = 0;
+let total = 0;
+let rem;
+let k = 7;
+
+for (let i = 0; i < arr.length; i++){
+    prefixSum += arr[i]
+
+    rem = prefixSum % k;
+
+    if (rem < 0) {
+        rem += k;
     }
 
+    if (map.has(rem)) {
+        total += map.get(rem)
+    }
 
+    map.set(rem, (map.get(rem) || 0) + 1)
 }
 
-console.log(arr.slice(startIndex, startIndex + k));
-console.log(maxSum);
+console.log(total);
 
