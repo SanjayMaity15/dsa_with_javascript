@@ -253,22 +253,38 @@
 // console.log(count);
 
 
-// ! 8️⃣ Move Zeroes (Two Pointer Approach)
+// ! 8️⃣ Move Zeroes
 
-let arr = [0, 1, 0, 3, 12]
+// let arr = [0, 1, 0, 3, 12]
 
-let pos = 0;
+// let pos = 0;
 
-for (let i = 0; i < arr.length; i++){
-	if (arr[i] !== 0) {
-		arr[pos] = arr[i]
-		pos++
+// for (let i = 0; i < arr.length; i++){
+// 	if (arr[i] !== 0) {
+// 		arr[pos] = arr[i]
+// 		pos++
+// 	}
+// }
+
+// for (let i = pos; i < arr.length; i++){
+// 	arr[i] = 0;
+// }
+
+
+// console.log(arr);
+
+
+// ! Remove Duplicates from Sorted Array
+
+let arr = [1, 2, 3, 4, 4, 6, 9]
+
+let i = 0;
+
+for (let j = 1; j < arr.length; j++){
+	if (arr[j] !== arr[i]) {
+		i++;
+		arr[i] = arr[j]
 	}
 }
 
-for (let i = pos; i < arr.length; i++){
-	arr[i] = 0;
-}
-
-
-console.log(arr);
+console.log(arr.slice(0, i + 1));
