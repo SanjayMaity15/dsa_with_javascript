@@ -32,15 +32,35 @@
 
 // !  Find the Last Occurrence of an Element
 
-let arr = [3, 5, 3, 7, 3]
+// let arr = [3, 5, 3, 7, 3]
 
-let elem = 3;
+// let elem = 3;
 
-for (let i = arr.length - 1; i >= 0; i++){
+// for (let i = arr.length - 1; i >= 0; i++){
+//     if (arr[i] === elem) {
+//         console.log(i);
+//         break
+//     }
+// }
+
+// ! 4️⃣ Count How Many Times an Element Appears
+
+// Input: [1, 2, 2, 3, 2, 4], element = 2
+// Output: 3 times
+
+
+let arr = [1, 2, 2, 3, 2, 4];
+let elem = 2;
+
+let count = 0;
+
+for (let i = 0; i < arr.length; i++){
     if (arr[i] === elem) {
-        console.log(i);
-        break
+        count++
+
     }
 }
 
+
+console.log(count);
 
