@@ -13,7 +13,6 @@
 //     }
 // }
 
-
 // ! 2️⃣ Find the First Occurrence of an Element
 
 // Input: [3, 5, 3, 7, 3], search = 3
@@ -48,19 +47,31 @@
 // Input: [1, 2, 2, 3, 2, 4], element = 2
 // Output: 3 times
 
+// let arr = [1, 2, 2, 3, 2, 4];
+// let elem = 2;
 
-let arr = [1, 2, 2, 3, 2, 4];
-let elem = 2;
+// let count = 0;
 
-let count = 0;
+// for (let i = 0; i < arr.length; i++){
+//     if (arr[i] === elem) {
+//         count++
+
+//     }
+// }
+
+// console.log(count);
+
+// !  Find All Indexes Where the Element Appears
+
+// Input: ([5, 7, 5, 9, 5], (search = 5));
+// Output: [0, 2, 4];
+
+let arr = [5, 7, 5, 9, 5]
+
+let elem = 5
 
 for (let i = 0; i < arr.length; i++){
-    if (arr[i] === elem) {
-        count++
-
+    if (elem === arr[i]) {
+        console.log(i);
     }
 }
-
-
-console.log(count);
-
