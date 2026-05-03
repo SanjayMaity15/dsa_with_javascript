@@ -19,14 +19,27 @@
 // Input: [3, 5, 3, 7, 3], search = 3
 // Output: index 0
 
+// let arr = [3, 5, 3, 7, 3]
+
+// let elem = 3;
+
+// for (let i = 0; i < arr.length; i++){
+//     if (elem === arr[i]) {
+//         console.log(i);
+//         return
+//     }
+// }
+
+// !  Find the Last Occurrence of an Element
+
 let arr = [3, 5, 3, 7, 3]
 
 let elem = 3;
 
-for (let i = 0; i < arr.length; i++){
-    if (elem === arr[i]) {
+for (let i = arr.length - 1; i >= 0; i++){
+    if (arr[i] === elem) {
         console.log(i);
-        return
+        break
     }
 }
 
