@@ -88,8 +88,35 @@
 // Input: [3, 5, 8, 12, 17], search = 10
 // Output: 12
 
+// let arr = [3, 5, 8, 12, 17]
+// let search = 12;
+
+// let start = 0;
+// let end = arr.length - 1;
+// let ans = 0;
+
+// while (start <= end) {
+    
+//     let mid = start + Math.floor((end - start) / 2)
+
+//     if (arr[mid] > search) {
+//         ans = arr[mid]
+//         end = mid - 1
+//     } else {
+//         start = mid + 1
+//     }
+
+// }
+
+// console.log(ans);
+
+
+// ! 2️⃣ Find the Greatest Element Smaller Than a Given Value
+// Input: [3, 5, 8, 12, 17], search = 10
+// Output: 8
+
 let arr = [3, 5, 8, 12, 17]
-let search = 10;
+let search = 10
 
 let start = 0;
 let end = arr.length - 1;
@@ -99,11 +126,11 @@ while (start <= end) {
     
     let mid = start + Math.floor((end - start) / 2)
 
-    if (arr[mid] > search) {
+    if (arr[mid] < search) {
         ans = arr[mid]
-        end = mid - 1
-    } else {
         start = mid + 1
+    } else {
+        end = mid - 1
     }
 
 }
