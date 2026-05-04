@@ -115,24 +115,48 @@
 // Input: [3, 5, 8, 12, 17], search = 10
 // Output: 8
 
-let arr = [3, 5, 8, 12, 17]
-let search = 10
+// let arr = [3, 5, 8, 12, 17]
+// let search = 10
 
-let start = 0;
-let end = arr.length - 1;
-let ans = 0;
+// let start = 0;
+// let end = arr.length - 1;
+// let ans = 0;
 
-while (start <= end) {
+// while (start <= end) {
     
+//     let mid = start + Math.floor((end - start) / 2)
+
+//     if (arr[mid] < search) {
+//         ans = arr[mid]
+//         start = mid + 1
+//     } else {
+//         end = mid - 1
+//     }
+
+// }
+
+// console.log(ans);
+
+
+//! 4️⃣ Find the Peak Element in a Mountain Array (Binary Search Variant)
+
+// Input: [1, 3, 5, 7, 6, 4, 2]
+// Output: Peak = 7 at index 3
+
+let arr = [1, 3, 5, 7, 6, 4, 2]
+let start = 0;
+let end = arr.length - 1
+
+while (start < end) {
     let mid = start + Math.floor((end - start) / 2)
 
-    if (arr[mid] < search) {
-        ans = arr[mid]
+    if (arr[mid] < arr[mid + 1]) {
         start = mid + 1
     } else {
-        end = mid - 1
+        end = mid
     }
 
 }
 
-console.log(ans);
+
+console.log(start);
