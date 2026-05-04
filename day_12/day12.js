@@ -69,18 +69,52 @@
 
 //  ! 1️⃣ Sort an Array of Objects by Age (Ascending)
 
-let arr = [
-	{name: "Sanjay", age: 24},
-	{name: "Anowar", age: 14},
-	{name: "Rahul", age: 42},
-]
+// let arr = [
+// 	{name: "Sanjay", age: 24},
+// 	{name: "Anowar", age: 14},
+// 	{name: "Rahul", age: 42},
+// ]
 
-arr.sort((a, b) => {
-	if (a.age > b.age) {
-		return 1
-	} else {
-		return -1
-	}
-})
+// arr.sort((a, b) => {
+// 	if (a.age > b.age) {
+// 		return 1
+// 	} else {
+// 		return -1
+// 	}
+// })
 
-console.log(arr);
+// console.log(arr);
+
+// ! Sort an Array but Keep Zeros at the End (Zeros Fixed)
+
+// let arr = [3, 0, 5, 0, 2, 1]
+
+// let pos = 0;
+
+// for (let i = 0; i < arr.length - 1; i++){
+// 	for (j = 0; j < arr.length - i - 1; j++){
+// 		if (arr[j] > arr[j + 1]) {
+// 			let temp = arr[j]
+// 			arr[j] = arr[j + 1]
+// 			arr[j + 1] = temp
+// 		}
+// 	}
+// }
+
+
+// for (let i = 0; i < arr.length; i++) {
+// 	if (arr[i] !== 0) {
+// 		arr[pos] = arr[i];
+// 		pos++;
+// 	}
+// }
+
+// for (let j = pos; j < arr.length; j++) {
+// 	arr[j] = 0;
+// }
+
+
+
+
+// console.log(arr);
+
