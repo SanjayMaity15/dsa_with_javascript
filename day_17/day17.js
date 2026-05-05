@@ -43,30 +43,52 @@
 
 // ! Valid Parentheses (Balanced Brackets)
 
-let str = "({{[()]}})";
+// let str = "({{[()]}})";
 
-function isValidParanthesis(str) {
-	let paranthesisStack = [];
+// function isValidParanthesis(str) {
+// 	let paranthesisStack = [];
 
-	for (let i = 0; i < str.length; i++) {
-		let char = str[i];
+// 	for (let i = 0; i < str.length; i++) {
+// 		let char = str[i];
 
-		if (char === "(" || char === "{" || char === "[") {
-			paranthesisStack.push(char);
-		} else {
-			if (paranthesisStack.length === 0) return false;
-			let top = paranthesisStack.pop();
+// 		if (char === "(" || char === "{" || char === "[") {
+// 			paranthesisStack.push(char);
+// 		} else {
+// 			if (paranthesisStack.length === 0) return false;
+// 			let top = paranthesisStack.pop();
 
-			if (
-				(char === ")" && top !== "(") ||
-				(char === "}" && top !== "{") ||
-				(char === "]" && top !== "[")
-			) {
-				return false;
-			}
-		}
-	}
-	return paranthesisStack.length === 0;
+// 			if (
+// 				(char === ")" && top !== "(") ||
+// 				(char === "}" && top !== "{") ||
+// 				(char === "]" && top !== "[")
+// 			) {
+// 				return false;
+// 			}
+// 		}
+// 	}
+// 	return paranthesisStack.length === 0;
+// }
+
+// console.log(isValidParanthesis(str));
+
+
+// ! Next Greater Element
+
+let arr = [4, 5, 2, 10]
+// [(5, 10, 10, -1)];
+
+let result = []
+for (let i = 0; i < arr.length; i++){
+    let next = -1;
+
+    for (let j = i + 1; j < arr.length; j++){
+        if (arr[j] > arr[i]) {
+            next = arr[j]
+            break
+        }
+    }
+
+    result.push(next)
 }
 
-console.log(isValidParanthesis(str));
+console.log(result);
