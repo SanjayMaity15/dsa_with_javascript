@@ -33,11 +33,21 @@
 
 //  !  Find the Sum of First N Natural Numbers Using Recursion
 
-function sumOfNumbers(n) {
+// function sumOfNumbers(n) {
 
-    if (n === 0) return 0
+//     if (n === 0) return 0
     
-    return n + sumOfNumbers(n - 1)
+//     return n + sumOfNumbers(n - 1)
+// }
+
+// console.log(sumOfNumbers(4));
+
+//  !  Calculate Power Using Recursion
+
+function power(base, pow) {
+    if (pow === 0) return 1
+    
+    return base * power(base, pow - 1)
 }
 
-console.log(sumOfNumbers(4));
+console.log(power(2, 3));
