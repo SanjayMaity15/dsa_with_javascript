@@ -95,5 +95,4 @@ function palindrome(n) {
     return n === reverseNumber(n)
 }
 
-
 console.log(palindrome(121));
