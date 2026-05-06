@@ -6,9 +6,7 @@
 // 	console.log(n);
 // }
 
-
 // printNumbers(5);
-
 
 // ! Print Numbers from N to 1 Using Recursion
 
@@ -20,7 +18,6 @@
 // }
 
 // printNumbers(5)
-
 
 // !  Find Factorial of a Number Using Recursion
 
@@ -36,7 +33,7 @@
 // function sumOfNumbers(n) {
 
 //     if (n === 0) return 0
-    
+
 //     return n + sumOfNumbers(n - 1)
 // }
 
@@ -44,10 +41,20 @@
 
 //  !  Calculate Power Using Recursion
 
-function power(base, pow) {
-    if (pow === 0) return 1
-    
-    return base * power(base, pow - 1)
+// function power(base, pow) {
+//     if (pow === 0) return 1
+
+//     return base * power(base, pow - 1)
+// }
+
+// console.log(power(2, 3));
+
+//!  Find the Sum of Digits of a Number Using Recursion
+
+function sumDigits(n) {
+	if (n === 0) return 0; // base case
+	return (n % 10) + sumDigits(Math.floor(n / 10));
 }
 
-console.log(power(2, 3));
+
+console.log(sumDigits(123));
