@@ -60,12 +60,23 @@
 
 // ! Reverse a Number Using Recursion
 
-function reverseNumber(n, rev = 0) {
-	if (n === 0) return rev; 
+// function reverseNumber(n, rev = 0) {
+// 	if (n === 0) return rev;
 
-	rev = rev * 10 + (n % 10);
-	return reverseNumber(Math.floor(n / 10), rev);
+// 	rev = rev * 10 + (n % 10);
+// 	return reverseNumber(Math.floor(n / 10), rev);
+// }
+
+
+// console.log(reverseNumber(1234));
+
+// ! Find the Product of Digits of a Number Using Recursion
+
+function prodOfNumbers(n) {
+    if (n === 0) return 1
+    
+    return (n % 10) * prodOfNumbers(Math.floor(n / 10))
+
 }
 
-
-console.log(reverseNumber(1234));
+console.log(prodOfNumbers(12345));
