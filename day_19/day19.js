@@ -51,10 +51,21 @@
 
 //!  Find the Sum of Digits of a Number Using Recursion
 
-function sumDigits(n) {
-	if (n === 0) return 0; // base case
-	return (n % 10) + sumDigits(Math.floor(n / 10));
+// function sumDigits(n) {
+// 	if (n === 0) return 0; // base case
+// 	return (n % 10) + sumDigits(Math.floor(n / 10));
+// }
+
+// console.log(sumDigits(123));
+
+// ! Reverse a Number Using Recursion
+
+function reverseNumber(n, rev = 0) {
+	if (n === 0) return rev; 
+
+	rev = rev * 10 + (n % 10);
+	return reverseNumber(Math.floor(n / 10), rev);
 }
 
 
-console.log(sumDigits(123));
+console.log(reverseNumber(1234));
