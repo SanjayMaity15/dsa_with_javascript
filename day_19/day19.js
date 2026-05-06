@@ -24,9 +24,20 @@
 
 // !  Find Factorial of a Number Using Recursion
 
-function factorial(n) {
-    if(n === 0) return 1
-    return n * factorial(n - 1)
+// function factorial(n) {
+//     if(n === 0) return 1
+//     return n * factorial(n - 1)
+// }
+
+// console.log(factorial(5));
+
+//  !  Find the Sum of First N Natural Numbers Using Recursion
+
+function sumOfNumbers(n) {
+
+    if (n === 0) return 0
+    
+    return n + sumOfNumbers(n - 1)
 }
 
-console.log(factorial(5));
+console.log(sumOfNumbers(4));
