@@ -59,27 +59,50 @@
 
 //  Q - 35
 
-/**
- * @param {number[]} nums
- * @param {number} target
- * @return {number}
- */
-var searchInsert = function (nums, target) {
-    let left = 0;
-    let right = nums.length - 1;
-    let mid;
+// /**
+//  * @param {number[]} nums
+//  * @param {number} target
+//  * @return {number}
+//  */
+// var searchInsert = function (nums, target) {
+//     let left = 0;
+//     let right = nums.length - 1;
+//     let mid;
 
-    while (left <= right) {
-        mid = Math.floor((left + right) / 2)
+//     while (left <= right) {
+//         mid = Math.floor((left + right) / 2)
 
-        if (nums[mid] === target) {
-            return mid
-        } else if (nums[mid] < target) {
-            left = mid + 1
-        } else {
-            right = mid - 1
-        }
+//         if (nums[mid] === target) {
+//             return mid
+//         } else if (nums[mid] < target) {
+//             left = mid + 1
+//         } else {
+//             right = mid - 1
+//         }
 
-    }
-    return left
-};
+//     }
+//     return left
+// };
+
+// maximum sum subarray
+
+arr = [2, 1, 5, 1, 3, 2]
+k = 3
+
+let windowSum = 0;
+let maxSum = 0;
+
+for (let i = 0; i < k; i++){
+    windowSum += arr[i]
+}
+
+maxSum = windowSum
+
+for (let i = k; i < arr.length; i++){
+    windowSum = windowSum - arr[i - k] + arr[i]
+    maxSum = Math.max(windowSum, maxSum)
+}
+
+console.log(maxSum)
+// Output: 9
+// [5,1,3]
