@@ -106,23 +106,63 @@
 // [5,1,3]
 
 //  Q - 643
-arr = [1, 12, -5, -6, 50, 3];
-k = 4;
 
-// Output: 12.75;
+// arr = [1, 12, -5, -6, 50, 3];
+// k = 4;
 
-let windowSum = 0;
-let maxSum = 0;
+// // Output: 12.75;
 
-for (let i = 0; i < k; i++) {
-	windowSum += arr[i];
-}
+// let windowSum = 0;
+// let maxSum = 0;
 
-maxSum = windowSum;
+// for (let i = 0; i < k; i++) {
+// 	windowSum += arr[i];
+// }
 
-for (let i = k; i < arr.length; i++) {
-	windowSum = windowSum - arr[i - k] + arr[i];
-	maxSum = Math.max(windowSum, maxSum);
-}
+// maxSum = windowSum;
 
-console.log(maxSum / k);
+// for (let i = k; i < arr.length; i++) {
+// 	windowSum = windowSum - arr[i - k] + arr[i];
+// 	maxSum = Math.max(windowSum, maxSum);
+// }
+
+// console.log(maxSum / k);
+
+//  Q - 1456
+
+/**
+ * @param {string} s
+ * @param {number} k
+ * @return {number}
+ */
+var maxVowels = function(s, k) {
+
+    const vowel = ["a", "e", "i", "o", "u" ]
+
+    
+    let max = 0;
+    let count = 0;
+
+    for(let i = 0; i < k; i++){
+        if(vowel.includes(s[i])){
+            count++
+        }
+    }
+
+    max = count;
+
+    for(let i = k ; i < s.length; i++){
+        if(vowel.includes(s[i])){
+            count++
+        }
+
+        if(vowel.includes(s[i - k])){
+            count--
+        }
+
+        max = Math.max(max, count)
+    }
+
+    return max
+
+};
