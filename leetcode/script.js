@@ -26,7 +26,6 @@
 //         }
 //     }
 
-
 //     return nums
 // };
 
@@ -55,7 +54,6 @@
 //     return - 1
 
 // };
-
 
 //  Q - 35
 
@@ -86,23 +84,45 @@
 
 // maximum sum subarray
 
-arr = [2, 1, 5, 1, 3, 2]
-k = 3
+// arr = [2, 1, 5, 1, 3, 2]
+// k = 3
+
+// let windowSum = 0;
+// let maxSum = 0;
+
+// for (let i = 0; i < k; i++){
+//     windowSum += arr[i]
+// }
+
+// maxSum = windowSum
+
+// for (let i = k; i < arr.length; i++){
+//     windowSum = windowSum - arr[i - k] + arr[i]
+//     maxSum = Math.max(windowSum, maxSum)
+// }
+
+// console.log(maxSum)
+// Output: 9
+// [5,1,3]
+
+//  Q - 643
+arr = [1, 12, -5, -6, 50, 3];
+k = 4;
+
+// Output: 12.75;
 
 let windowSum = 0;
 let maxSum = 0;
 
-for (let i = 0; i < k; i++){
-    windowSum += arr[i]
+for (let i = 0; i < k; i++) {
+	windowSum += arr[i];
 }
 
-maxSum = windowSum
+maxSum = windowSum;
 
-for (let i = k; i < arr.length; i++){
-    windowSum = windowSum - arr[i - k] + arr[i]
-    maxSum = Math.max(windowSum, maxSum)
+for (let i = k; i < arr.length; i++) {
+	windowSum = windowSum - arr[i - k] + arr[i];
+	maxSum = Math.max(windowSum, maxSum);
 }
 
-console.log(maxSum)
-// Output: 9
-// [5,1,3]
+console.log(maxSum / k);
